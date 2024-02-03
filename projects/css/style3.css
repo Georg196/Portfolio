@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  font-family: "Evolventa";
+  font-weight: 400;
+  color: #111;
+  background-color: #f5f5f5;
+  font-size: 18px;
+}
+
+a {
+  color: #ffb92f;
+}
+a:hover {
+  font-weight: 700;
+}
+
+.menu {
+  max-width: 220px;
+  height: 100vh;
+  position: fixed;
+  background: #ffb92f;
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+}
+.menu a {
+  color: #111;
+  font-size: clamp(14px, 2vw, 24px);
+  margin-left: 10%;
+}
+.menu p {
+  color: #555555;
+  font-size: clamp(10px, 2vw, 16px);
+  margin-left: 10%;
+}
+.menu .active {
+  color: #f5f5f5;
+  font-weight: 600;
+}
+
+.face {
+  margin-left: -10%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: #555555;
+}
+
+.social {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 35%;
+  right: 1%;
+  padding: 0.5%;
+  border-radius: 360px;
+  border: 3px solid #ffb92f;
+}
+.social a {
+  margin-bottom: 20%;
+  margin-top: 20%;
+}
+
+h2 {
+  font-size: 64px;
+  margin: 0 0 40px 0;
+}
+
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 60px 15% 0 280px;
+  gap: 30px;
+}
+.container__wrap {
+  width: 100%;
+  border-bottom: 1px solid #555;
+}
+
+#portfolio {
+  margin: 1rem 0;
+  -moz-column-count: 3;
+  column-count: 3;
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+  -moz-column-width: 33.3333333333%;
+  column-width: 33.3333333333%;
+}
+
+.tile {
+  transform: scale(0);
+  transition: all 350ms ease;
+}
+
+.scale-anm {
+  transform: scale(1);
+}
+
+p {
+  padding: 10px;
+  border-bottom: 1px #ccc dotted;
+  text-decoration: none;
+  font-family: lato;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #333;
+  display: block;
+  float: left;
+}
+
+p:hover {
+  cursor: pointer;
+  background: #333;
+  color: #eee;
+}
+
+.tile img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  font-family: "Evolventa";
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  height: auto;
+  border: 1px solid;
+  border-radius: 10px;
+  vertical-align: middle;
+  color: #555;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: none;
+  border-color: var(--darken-2);
+  box-shadow: 0 0 0 3px var(--darken-3);
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}/*# sourceMappingURL=style3.css.map */

@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+	background: #f5f5f5;
+	font-family: 'Evolventa';
+	font-weight: 400;
+	color: #111;
+	// overflow-y: hidden;
+
+	p {
+		font-size: clamp(14px, 2vw, 18px);
+	}
+}
+
+.container1 {
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+	margin: 10%;
+	gap: 6%;
+
+	a {
+		display: flex;
+		justify-content: center;
+		max-width: 300px;
+		min-height: 60px;
+		margin-top: 2%;
+		border-radius: 360px;
+		background: #ffb92f;
+
+		p {
+			align-self: center;
+			color: #f5f5f5;
+			display: block;
+			font-size: 18px;
+		}
+
+		&:hover {
+			background: #ec9e00;
+		}
+	}
+}
+
+.animateButton {
+	transition: background-color 0.5s ease;
+	outline: none;
+	border: none;
+}
+
+/* содержимое */
+.welcome {
+	font-size: clamp(18px, 2vw, 24px);
+	color: #ffb92f;
+}
+
+h1 {
+	display: inline-block;
+	font-size: clamp(54px, 5vw, 84px);
+	font-weight: 400;
+	line-height: 100%;
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+
+	span {
+		border-radius: 360px;
+		background: #ffb92f;
+		padding: 2% 5%;
+		align-self: center;
+		margin-right: 2%;
+		margin-bottom: 2%;
+
+		p {
+			color: #f5f5f5;
+		}
+	}
+}
+
+.container2 {
+	display: flex;
+	width: 100%;
+	background-color: #ffb92f;
+
+	img {
+		margin: 0;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+// Соцсети:
+
+.social {
+	// background: #000;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 35%;
+	right: 1%;
+	padding: 0.5%;
+	border-radius: 360px;
+	border: 3px solid #f5f5f5;
+
+	a {
+		margin-bottom: 20%;
+		margin-top: 20%;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	body {
+		display: inline;
+	}
+
+	h1 {
+		margin-bottom: 2%;
+	}
+
+	.container1 {
+		padding: auto;
+		gap: 10px;
+	}
+
+	.social {
+		// background: #000;
+		top: 500px;
+
+		a {
+			margin-left: 10px;
+			margin-right: 10px;
+
+			img {
+				width: 6vh;
+				height: 6vh;
+				object-fit: cover;
+			}
+		}
+	}
+}
