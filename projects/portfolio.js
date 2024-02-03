@@ -76,27 +76,26 @@ const myPortfolio = [
 	},
 ]
 
-
 window.addEventListener('DOMContentLoaded', function () {
 	initPortfolioGallery(myPortfolio)
-    initPortfolioButtons(portfolioSettings)
+	initPortfolioButtons(portfolioSettings)
 })
 
-// 
+//
 
 function initPortfolioButtons(portfolioSettings) {
-	let portfolioParentElTool = document.getElementById('tbar')
+	let portfolioRootElTool = document.getElementById('tbar')
 
-    for (const key in portfolioSettings.tagsMap) {
-        const item = portfolioSettings.tagsMap[key];
-        const btnEl = document.createElement('button')
-        btnEl.className = `btn fil-cat`
-        btnEl.innerHTML = `${item.title}`
-        btnEl.setAttribute('data-rel', item.tagName)
+	for (const key in portfolioSettings.tagsMap) {
+		const item = portfolioSettings.tagsMap[key]
+		const btnEl = document.createElement('button')
+		btnEl.className = `btn fil-cat`
+		btnEl.innerHTML = `${item.title}`
+		btnEl.setAttribute('data-rel', item.tagName)
 
-        portfolioParentElTool.appendChild(btnEl)
-        console.log(btnEl)
-    }
+		portfolioRootElTool.appendChild(btnEl)
+		console.log(btnEl)
+	}
 
 	initCategoryBtns(portfolioSettings)
 }
@@ -119,21 +118,37 @@ function initCategoryBtns(portfolioSettings) {
 	}
 }
 
-// генерация div-картинок 
+// генерация div-картинок
 
-function initPortfolioGallery(portfolioArray) {
-	let portfolioParentEl = document.getElementById('portfolio')
+async function initPortfolioGallery(portfolioArray) {
+	let portfolioRootEl = document.getElementById('portfolio')
+	
+    setLoaderToEl(portfolioRootEl, true)
+	const items = await fetchPortfolioItems();
+	setLoaderToEl(portfolioRootEl, false)
+    renderItems(items);
 
-	portfolioArray.forEach(item => {
-		const newDiv = document.createElement('div')
-		newDiv.className = `tile scale-anm all ${item.tagName.title}`
-		newDiv.innerHTML = `<img src="${item.src}" alt="${item.alt}" />`
+    async function fetchPortfolioItems() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve(myPortfolio)
+            }, 1000)
+        })
+    }
 
-		portfolioParentEl.appendChild(newDiv)
-		console.log(newDiv)
-	})
+	function renderItems(items) {
+		items.forEach(item => {
+			const newDiv = document.createElement('div')
+			newDiv.className = `tile scale-anm all ${item.tagName.title}`
+			newDiv.innerHTML = `<img src="${item.src}" alt="${item.alt}" />`
+			portfolioRootEl.appendChild(newDiv)
+			console.log(newDiv)
+		})
+	}
 }
 
-
-
-
+function setLoaderToEl(domElement, isLoading) {
+    domElement.innerHTML = isLoading
+        ? '<span>Loading...</span>'
+        : ''
+}
