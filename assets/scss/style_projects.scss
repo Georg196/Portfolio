@@ -26,7 +26,7 @@ h2 {
 	display: block;
 	border-radius: 10px;
 	width: 22vw;
-	height: 60vh;
+	height: 25vh;
 	margin-bottom: 20px;
 }
 
@@ -34,33 +34,51 @@ h2 {
 	display: block;
 	border-radius: 10px;
 	width: 22vw;
-	height: 40vh;
+	height: 65vh;
 	margin-bottom: 20px;
+}
+
+.mr-2 {
+	margin-right: 10px;
+}
+
+.d-flex {
+	display: flex;
 }
 
 .skeleton {
 	animation: skeleton-loading 2s linear infinite alternate;
-}
 
-@keyframes skeleton-loading {
-	0% {
-		background-color: hsl(200, 20%, 70%);
+	@keyframes skeleton-loading {
+		0% {
+			background-color: hsl(200, 20%, 70%);
+		}
+
+		100% {
+			background-color: hsl(200, 20%, 95%);
+		}
 	}
 
-	100% {
-		background-color: hsl(200, 20%, 95%);
+	&__btn {
+		width: 110px;
+		// height: 48px;
+		border-radius: 10px;
 	}
 }
 
 //  Галерея
 
+.toolbar {
+	display: flex;
+}
+
 #portfolio {
 	-webkit-column-count: 3;
 	-moz-column-count: 3;
 	column-count: 3;
-	-webkit-column-gap: 1rem;
-	-moz-column-gap: 1rem;
-	column-gap: 1rem;
+	-webkit-column-gap: 1.5rem;
+	-moz-column-gap: 1.5rem;
+	column-gap: 1.5rem;
 	-webkit-column-width: 33.33333333333333%;
 	-moz-column-width: 33.33333333333333%;
 	column-width: 33.33333333333333%;
@@ -71,6 +89,10 @@ h2 {
 	transform: scale(0);
 	-webkit-transition: all 350ms ease;
 	transition: all 350ms ease;
+
+	img {
+		box-shadow: 0 10px 10px 0 rgba(51, 51, 51, 0.25);
+	}
 }
 
 .scale-anm {
@@ -78,12 +100,7 @@ h2 {
 }
 
 p {
-	padding: 10px;
 	border-bottom: 1px #ccc dotted;
-	text-decoration: none;
-	font-family: lato;
-	text-transform: uppercase;
-	font-size: 12px;
 	color: #333;
 	display: block;
 	float: left;
@@ -104,7 +121,7 @@ p:hover {
 
 .btn {
 	font-family: $font-main;
-	font-size: 1rem;
+	font-size: $text;
 	font-weight: normal;
 	text-decoration: none;
 	cursor: pointer;

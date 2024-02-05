@@ -5,6 +5,10 @@
   list-style-type: none;
 }
 
+@font-face {
+  font-family: Evolventa;
+  src: url(/assets/fonts/Evolventa/Evolventa-Normal.ttf);
+}
 body {
   display: flex;
   font-family: "Evolventa";
@@ -110,5 +114,5 @@ h2 {
 .foto {
   width: 20vw;
   height: 100%;
-  transform: rotate(5deg);
+  transform: rotate(3deg);
 }

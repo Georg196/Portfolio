@@ -8,16 +8,16 @@ const portfolioSettings = {
 		web: {
 			id: 'web',
 			tagName: 'web',
-			title: 'Веб-дизайн',
+			title: 'Вебдизайн',
 		},
-		flyers: {
-			id: 'flyers',
-			tagName: 'flyers',
+		design: {
+			id: 'design',
+			tagName: 'design',
 			title: 'Дизайн',
 		},
-		bcards: {
-			id: 'bcards',
-			tagName: 'bcards',
+		front: {
+			id: 'front',
+			tagName: 'front',
 			title: 'Верстка',
 		},
 		new: {
@@ -75,14 +75,14 @@ const myPortfolio = [
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '/assets/images/portfolio/Web/AgroVkus.jpg',
+		src: '/assets/images/portfolio/Web/TulisovMed.jpg',
 		alt: '',
-		tagName: portfolioSettings.tagsMap.bcards,
+		tagName: portfolioSettings.tagsMap.front,
 	},
 	{
 		src: '/assets/images/portfolio/1111.png',
 		alt: '',
-		tagName: portfolioSettings.tagsMap.flyers,
+		tagName: portfolioSettings.tagsMap.design,
 	},
 ]
 
@@ -131,9 +131,9 @@ function initCategoryBtns(portfolioSettings) {
 async function initPortfolioGallery(portfolioArray) {
 	let portfolioRootEl = document.getElementById('portfolio')
 
-	setLoaderToEl(portfolioRootEl, true)
+	setGridLoaderToEl(portfolioRootEl, true)
 	const items = await fetchPortfolioItems()
-	setLoaderToEl(portfolioRootEl, false)
+	setGridLoaderToEl(portfolioRootEl, false)
 	renderItems(items)
 
 	async function fetchPortfolioItems() {
@@ -155,6 +155,23 @@ async function initPortfolioGallery(portfolioArray) {
 	}
 }
 
-function setLoaderToEl(domElement, isLoading) {
-	domElement.innerHTML = isLoading ? '<span>Загрузка...</span>' : ''
+function setGridLoaderToEl(domElement, isLoading) {
+    const generateSkeleton = (count) => {
+        return [...new Array(count)].map((_, index) => {
+            return `<div class="skeleton frame-${ index % 2 ? '1' : '2'}"></div>`
+        }).join('\n')
+    }
+
+	domElement.innerHTML = isLoading ? generateSkeleton(13) : ''
 }
+
+
+// function setGridBtnToEl(domElement, isLoading) {
+//     const generateSkeletonBtn = (count) => {
+//         return [...new Array(count)].map((_, index) => {
+//             return `<div class="skeleton skeleton__btn mr-2"></div>`
+//         }).join('\n')
+//     }
+
+// 	domElement.innerHTML = isLoading ? generateSkeletonBtn(13) : ''
+// }
