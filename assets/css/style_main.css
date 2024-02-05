@@ -1,0 +1,132 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: #f5f5f5;
+  font-family: "Evolventa";
+  font-weight: 400;
+  color: #111;
+}
+body p {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 10%;
+  gap: 6%;
+}
+.container1 a {
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  min-height: 60px;
+  margin-top: 2%;
+  border-radius: 360px;
+  background: #ffb92f;
+}
+.container1 a p {
+  align-self: center;
+  color: #f5f5f5;
+  display: block;
+  font-size: 18px;
+}
+.container1 a:hover {
+  background: #ec9e00;
+}
+
+.animateButton {
+  transition: background-color 0.5s ease;
+  outline: none;
+  border: none;
+}
+
+/* содержимое */
+.welcome {
+  font-size: clamp(18px, 2vw, 24px);
+  color: #ffb92f;
+}
+
+h1 {
+  display: inline-block;
+  font-size: clamp(54px, 5vw, 84px);
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills span {
+  border-radius: 360px;
+  background: #ffb92f;
+  padding: 2% 5%;
+  align-self: center;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+.skills span p {
+  color: #f5f5f5;
+}
+
+.container2 {
+  display: flex;
+  width: 100%;
+  background-color: #ffb92f;
+}
+.container2 img {
+  margin: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.social {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 35%;
+  right: 1%;
+  padding: 0.5%;
+  border-radius: 360px;
+  border: 3px solid #f5f5f5;
+}
+.social a {
+  margin-bottom: 20%;
+  margin-top: 20%;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    display: inline;
+  }
+  h1 {
+    margin-bottom: 2%;
+  }
+  .container1 {
+    padding: auto;
+    gap: 10px;
+  }
+  .social {
+    top: 500px;
+  }
+  .social a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .social a img {
+    width: 6vh;
+    height: 6vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
