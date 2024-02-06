@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  font-family: Evolventa;
+  font-family: "Evolventa";
   src: url(/assets/fonts/Evolventa/Evolventa-Normal.ttf);
 }
 body {
@@ -72,6 +72,17 @@ a:hover {
   margin-top: 20%;
 }
 
+@media (max-width: 1440px) {
+  .menu {
+    gap: 7%;
+    max-width: 200px;
+    height: 100vh;
+  }
+  .face {
+    margin-left: -10%;
+    width: 100%;
+  }
+}
 h2 {
   font-size: 64px;
   margin: 0 0 40px 0;
@@ -168,19 +179,6 @@ h4 {
 }
 .skill img {
   margin: 10px -10px;
-}
-
-.circle {
-  font-size: 64px;
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.circle p {
-  margin: auto;
-  position: absolute;
 }
 
 .load-circle {
@@ -313,5 +311,16 @@ h4 {
 @media (max-width: 1440px) {
   .text {
     width: 650px;
+  }
+}
+@media (max-width: 1440px) {
+  .container {
+    margin: 20px 250px;
+  }
+  .text {
+    width: 480px;
+  }
+  .load-circle__text {
+    font-size: 46px;
   }
 }

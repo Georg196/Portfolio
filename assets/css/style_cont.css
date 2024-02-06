@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  font-family: Evolventa;
+  font-family: "Evolventa";
   src: url(/assets/fonts/Evolventa/Evolventa-Normal.ttf);
 }
 body {
@@ -72,6 +72,17 @@ a:hover {
   margin-top: 20%;
 }
 
+@media (max-width: 1440px) {
+  .menu {
+    gap: 7%;
+    max-width: 200px;
+    height: 100vh;
+  }
+  .face {
+    margin-left: -10%;
+    width: 100%;
+  }
+}
 h2 {
   font-size: clamp(24px, 4vw, 64px);
   margin: 0 0 40px 0;
@@ -82,7 +93,6 @@ h2 {
 }
 
 .content__one {
-  width: 1000px;
   margin: 20px 0 20px 0;
   font-size: clamp(18px, 2vw, 24px);
   line-height: 200%;
@@ -103,8 +113,16 @@ h2 {
   margin-left: 45vw;
 }
 
-@media (max-width: 1340px) {
+@media (max-width: 1440px) {
+  .container {
+    margin: 20px 250px;
+  }
   .content__one {
-    width: 650px;
+    width: 800px;
+    line-height: 150%;
+  }
+  .content__one p {
+    margin-top: 40px;
+    margin-bottom: 10px;
   }
 }

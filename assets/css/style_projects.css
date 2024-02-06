@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  font-family: Evolventa;
+  font-family: "Evolventa";
   src: url(/assets/fonts/Evolventa/Evolventa-Normal.ttf);
 }
 body {
@@ -72,6 +72,17 @@ a:hover {
   margin-top: 20%;
 }
 
+@media (max-width: 1440px) {
+  .menu {
+    gap: 7%;
+    max-width: 200px;
+    height: 100vh;
+  }
+  .face {
+    margin-left: -10%;
+    width: 100%;
+  }
+}
 h2 {
   font-size: 64px;
   margin: 0 0 40px 0;
@@ -114,14 +125,15 @@ h2 {
 }
 
 .skeleton {
-  animation: skeleton-loading 2s linear infinite alternate;
+  opacity: 0.8;
+  animation: skeleton-loading 1s linear infinite alternate;
 }
 @keyframes skeleton-loading {
   0% {
-    background-color: hsl(200, 20%, 70%);
+    background-color: hsl(200, 20%, 75%);
   }
   100% {
-    background-color: hsl(200, 20%, 95%);
+    background-color: hsl(200, 20%, 90%);
   }
 }
 .skeleton__btn {
@@ -143,6 +155,7 @@ h2 {
 }
 
 .tile {
+  width: 22vw;
   transform: scale(0);
   transition: all 350ms ease;
 }
@@ -206,4 +219,10 @@ p:hover {
 ::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    margin: 20px 250px;
+  }
 }

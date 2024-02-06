@@ -47,15 +47,16 @@ h2 {
 }
 
 .skeleton {
-	animation: skeleton-loading 2s linear infinite alternate;
+	opacity: 0.8;
+	animation: skeleton-loading 1s linear infinite alternate;
 
 	@keyframes skeleton-loading {
 		0% {
-			background-color: hsl(200, 20%, 70%);
+			background-color: hsl(200, 20%, 75%);
 		}
 
 		100% {
-			background-color: hsl(200, 20%, 95%);
+			background-color: hsl(200, 20%, 90%);
 		}
 	}
 
@@ -85,6 +86,7 @@ h2 {
 }
 
 .tile {
+    width: 22vw;
 	-webkit-transform: scale(0);
 	transform: scale(0);
 	-webkit-transition: all 350ms ease;
@@ -152,4 +154,10 @@ p:hover {
 ::-moz-focus-inner {
 	border: 0;
 	padding: 0;
+}
+
+@media (max-width: 1440px) {
+	.container {
+		margin: 20px 250px;
+	}
 }

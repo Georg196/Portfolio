@@ -106,19 +106,6 @@ h4 {
 	}
 }
 
-.circle {
-	font-size: 64px;
-	font-weight: 700;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	p {
-		margin: auto;
-		position: absolute;
-	}
-}
-
 .load-circle {
 	$w: 110px;
 	position: relative;
@@ -168,7 +155,6 @@ h4 {
 			}
 		}
 	}
-
 	&--80-percent {
 		.load-circle__loader__circle {
 			animation: prixClipFix80 3s forwards linear;
@@ -183,7 +169,6 @@ h4 {
 			}
 		}
 	}
-
 	&--70-percent {
 		.load-circle__loader__circle {
 			animation: prixClipFix70 3s forwards linear;
@@ -198,7 +183,6 @@ h4 {
 			}
 		}
 	}
-
 	&--60-percent {
 		.load-circle__loader__circle {
 			animation: prixClipFix60 3s forwards linear;
@@ -285,10 +269,22 @@ h4 {
 	}
 }
 
+@media (max-width: 1440px) {
+	.text {
+		width: 650px;
+	}
+}
 
-@media (max-width: 1440px) { 
-    .text {
-        width: 650px;
-    }
-} 
-
+@media (max-width: 1440px) {
+	.container {
+		margin: 20px 250px;
+	}
+	.text {
+		width: 480px;
+	}
+	.load-circle {
+		&__text {
+			font-size: 46px;
+		}
+	}
+}

@@ -14,7 +14,6 @@ h2 {
 }
 
 .content__one {
-    width: 1000px;
 	margin: 20px 0 20px 0;
 	font-size: clamp(18px, 2vw, 24px);
 	line-height: 200%;
@@ -30,16 +29,25 @@ h2 {
 
 .strelka {
 	width: clamp(18vw, 2vw, 15vw);
-    transform: rotate(10deg);
+	transform: rotate(10deg);
 	position: absolute;
-    margin-top: 4%;
-	margin-left:  clamp(45vw, 2vw, 50vw);
+	margin-top: 4%;
+	margin-left: clamp(45vw, 2vw, 50vw);
 }
 
+@media (max-width: 1340px) {
+}
 
-@media (max-width: 1340px) { 
-    .content__one {
-        width: 650px;
-    }
-} 
-
+@media (max-width: 1440px) {
+	.container {
+		margin: 20px 250px;
+	}
+	.content__one {
+		width: 800px;
+		line-height: 150%;
+		p {
+			margin-top: 40px;
+			margin-bottom: 10px;
+		}
+	}
+}

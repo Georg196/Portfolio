@@ -1,17 +1,11 @@
-* {
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-}
+// Base style
+@import './base/reset';
+@import './base/vars';
+@import './base/base';
+@import './base/fixed';
 
 body {
-	display: flex;
 	height: 100vh;
-	background: #f5f5f5;
-	font-family: 'Evolventa';
-	font-weight: 400;
-	color: #111;
-	// overflow-y: hidden;
 
 	p {
 		font-size: clamp(14px, 2vw, 18px);
@@ -22,7 +16,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 85%;
-	margin: 10%;
+	margin: 5% 5% 0 10%;
 	gap: 6%;
 
 	a {
@@ -77,10 +71,8 @@ h1 {
 		align-self: center;
 		margin-right: 2%;
 		margin-bottom: 2%;
-
-		p {
-			color: #f5f5f5;
-		}
+		color: #f5f5f5;
+		font-weight: 400;
 	}
 }
 

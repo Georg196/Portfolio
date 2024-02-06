@@ -140,7 +140,7 @@ async function initPortfolioGallery(portfolioArray) {
 		return new Promise(resolve => {
 			setTimeout(() => {
 				resolve(myPortfolio)
-			}, 1000)
+			}, 100)
 		})
 	}
 
