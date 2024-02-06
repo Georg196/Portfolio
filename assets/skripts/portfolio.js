@@ -20,70 +20,159 @@ const portfolioSettings = {
 			tagName: 'front',
 			title: 'Верстка',
 		},
-		new: {
-			id: 'new',
-			tagName: 'new',
-			title: 'Новое',
-		},
+		// new: {
+		// 	id: 'new',
+		// 	tagName: 'new',
+		// 	title: 'Новое',
+		// },
 	},
 }
 
 const myPortfolio = [
 	{
+		src: '/assets/images/portfolio/Design/trening.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.design,
+	},
+	{
+		src: '/assets/images/portfolio/Design/Trening_slaid.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.design,
+	},
+	{
 		src: '/assets/images/portfolio/Web/AgroVkus.jpg',
 		alt: '',
+		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
+	},
+	{
+		src: '/assets/images/portfolio/Front/Calc.png',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.front,
 	},
 	{
 		src: '/assets/images/portfolio/Web/Dom_kulturi.jpg',
 		alt: '',
+		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
+	},
+	{
+		src: '/assets/images/portfolio/Front/Template.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.front,
 	},
 	{
 		src: '/assets/images/portfolio/Web/Goldray.jpg',
 		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.web,
+	},
+	{
+		src: '/assets/images/portfolio/Design/Back_to_hte_camp.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.design,
+	},
+	{
+		src: '/assets/images/portfolio/Design/Back_to_hte_camp_pes.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.design,
+	},
+	{
+		src: '/assets/images/portfolio/Web/O-mobile.jpg',
+		alt: '',
+		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
 		src: '/assets/images/portfolio/Web/LeMank.jpg',
 		alt: '',
+		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '/assets/images/portfolio/Web/O-mobile.jpg',
+		src: '/assets/images/portfolio/Design/Email_ras.jpg',
 		alt: '',
-		tagName: portfolioSettings.tagsMap.web,
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.design,
+	},
+	{
+		src: '/assets/images/portfolio/Design/Illustration_TIHH.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.design,
+	},
+	{
+		src: '/assets/images/portfolio/Design/LitleCamp.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.design,
+	},
+	{
+		src: '/assets/images/portfolio/Design/Wireframe-2.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
 		src: '/assets/images/portfolio/Web/OMG.jpg',
 		alt: '',
+		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
 		src: '/assets/images/portfolio/Web/Salbero.jpg',
 		alt: '',
+		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
+	},
+	{
+		src: '/assets/images/portfolio/Design/Narnia_roz.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.design,
+	},
+	{
+		src: '/assets/images/portfolio/Design/Narniabaner.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
 		src: '/assets/images/portfolio/Web/Tirs.jpg',
 		alt: '',
+		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
 		src: '/assets/images/portfolio/Web/TulisovMed.jpg',
 		alt: '',
+		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '/assets/images/portfolio/Web/TulisovMed.jpg',
+		src: '/assets/images/portfolio/Design/banners_3.jpg',
 		alt: '',
-		tagName: portfolioSettings.tagsMap.front,
-	},
-	{
-		src: '/assets/images/portfolio/1111.png',
-		alt: '',
+		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
+	{
+		src: '/assets/images/portfolio/Front/MyFace.png',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.front,
+	},
+	// {
+	// 	src: '/assets/images/portfolio/Front/To_do_list.png',
+	// 	alt: '',
+	// 	description: 'Lorem100',
+	// 	tagName: portfolioSettings.tagsMap.front,
+	// },
 ]
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -140,7 +229,7 @@ async function initPortfolioGallery(portfolioArray) {
 		return new Promise(resolve => {
 			setTimeout(() => {
 				resolve(myPortfolio)
-			}, 100)
+			}, 1000)
 		})
 	}
 
@@ -156,15 +245,16 @@ async function initPortfolioGallery(portfolioArray) {
 }
 
 function setGridLoaderToEl(domElement, isLoading) {
-    const generateSkeleton = (count) => {
-        return [...new Array(count)].map((_, index) => {
-            return `<div class="skeleton frame-${ index % 2 ? '1' : '2'}"></div>`
-        }).join('\n')
-    }
+	const generateSkeleton = count => {
+		return [...new Array(count)]
+			.map((_, index) => {
+				return `<div class="skeleton frame-${index % 2 ? '1' : '2'}"></div>`
+			})
+			.join('\n')
+	}
 
 	domElement.innerHTML = isLoading ? generateSkeleton(13) : ''
 }
-
 
 // function setGridBtnToEl(domElement, isLoading) {
 //     const generateSkeletonBtn = (count) => {

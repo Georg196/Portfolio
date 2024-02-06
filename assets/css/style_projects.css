@@ -167,19 +167,6 @@ h2 {
   transform: scale(1);
 }
 
-p {
-  border-bottom: 1px #ccc dotted;
-  color: #333;
-  display: block;
-  float: left;
-}
-
-p:hover {
-  cursor: pointer;
-  background: #333;
-  color: #eee;
-}
-
 .tile img {
   max-width: 100%;
   width: 100%;
