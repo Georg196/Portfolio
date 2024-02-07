@@ -160,6 +160,9 @@ h2 {
   transition: all 350ms ease;
 }
 .tile img {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
   box-shadow: 0 10px 10px 0 rgba(51, 51, 51, 0.25);
 }
 
@@ -171,7 +174,6 @@ h2 {
   max-width: 100%;
   width: 100%;
   height: auto;
-  margin-bottom: 1rem;
 }
 
 .btn {

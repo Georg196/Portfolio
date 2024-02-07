@@ -1,3 +1,5 @@
+// Боковое меню
+
 .menu {
 	max-width: 220px;
 	height: 100vh;
@@ -32,6 +34,8 @@
 	background: #555555;
 }
 
+// Соц сети справа
+
 .social {
 	position: fixed;
 	display: flex;
@@ -48,6 +52,7 @@
 	}
 }
 
+
 @media (max-width: 1440px) {
 	.menu {
 		gap: 7%;
@@ -59,6 +64,12 @@
 		width: 100%;
 	}
 }
+
+@media (max-width: 920px) {
+    
+}
+
+
 
 // assets/
 //     scss/

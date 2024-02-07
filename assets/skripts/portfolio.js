@@ -204,7 +204,7 @@ function initCategoryBtns(portfolioSettings) {
 			const classToShow = this.getAttribute('data-rel')
 			const portfolioEl = document.getElementById('portfolio')
 
-			for (let el of portfolioEl.querySelectorAll('div')) {
+			for (let el of portfolioEl.querySelectorAll('[data-card]')) {
 				el.style.display = 'none'
 			}
 
@@ -236,10 +236,18 @@ async function initPortfolioGallery(portfolioArray) {
 	function renderItems(items) {
 		items.forEach(item => {
 			const newDiv = document.createElement('div')
+            newDiv.setAttribute('data-card', 'true');
 			newDiv.className = `tile scale-anm all ${item.tagName.tagName}`
-			newDiv.innerHTML = `<img src="${item.src}" alt="${item.alt}" />`
+			newDiv.style.marginBottom = '20px';
+			newDiv.innerHTML = `
+                <div style="position: relative">
+                    <img src="${item.src}" alt="${item.alt}" />
+                    <div style="position: absolute; bottom: 0; left: 0">
+                        <p class="...">${item.description}</p>
+                    </div>
+                </div> 
+            `
 			portfolioRootEl.appendChild(newDiv)
-			console.log(newDiv)
 		})
 	}
 }
