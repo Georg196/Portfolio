@@ -63,6 +63,7 @@ button a {
   font-size: clamp(14px, 2vw, 18px);
 }
 button:hover {
+  color: #f5f5f5;
   background: #ec9e00;
   border: 2px solid #ec9e00;
 }
@@ -327,6 +328,11 @@ button:hover {
   vertical-align: middle;
   color: #555;
   background-color: rgba(0, 0, 0, 0);
+}
+.btn:hover {
+  color: #f5f5f5;
+  background-color: #ffb92f;
+  border: #ffb92f;
 }
 
 .btn:hover {
