@@ -5,7 +5,7 @@
 @import './base/fixed';
 
 h2 {
-	font-size: 64px;
+	font-size: clamp(24px, 4vw, 64px);
 	margin: 0 0 40px 0;
 }
 
@@ -270,21 +270,20 @@ h4 {
 }
 
 @media (max-width: 1440px) {
-	.text {
-		width: 650px;
-	}
-}
-
-@media (max-width: 1440px) {
 	.container {
 		margin: 20px 250px;
 	}
 	.text {
-		width: 480px;
+		width: 500px;
 	}
 	.load-circle {
 		&__text {
 			font-size: 46px;
+		}
+	}
+	.content__one {
+		li {
+			margin-left: 15px;
 		}
 	}
 }

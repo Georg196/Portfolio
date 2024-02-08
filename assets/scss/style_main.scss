@@ -27,6 +27,7 @@ body {
 		margin-top: 2%;
 		border-radius: 360px;
 		background: #ffb92f;
+        margin-bottom: 10%;
 
 		p {
 			align-self: center;
@@ -107,7 +108,7 @@ h1 {
 	}
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
 	body {
 		display: inline;
 	}
@@ -123,7 +124,10 @@ h1 {
 
 	.social {
 		// background: #000;
-		top: 500px;
+        display: inline;
+        left: 25%;
+		top: 780px;
+        border: none;
 
 		a {
 			margin-left: 10px;

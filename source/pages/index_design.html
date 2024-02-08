@@ -7,21 +7,29 @@
 		<title>Георгий Кондрашевский — Навыки дизайнера</title>
 	</head>
 	<body>
-		<div class="menu">
-			<div>
-				<a href="/source/pages/index.html"
-					><img
-						class="face"
-						src="/assets/images/Remove-bg.ai_1700557175860.png"
-						alt="my face"
-				/></a>
-			</div>
-			<a href="/source/pages/index_about.html">Обо мне</a>
-			<a href="/source/pages/index_design.html" class="active">Навыки</a>
-			<a href="/source/pages/index_project.html">Проекты</a>
-			<a href="/source/pages/index_cont.html">Контакты</a>
-			<p>Создано в 2023 г.</p>
-		</div>
+		<div class="container__menu">
+            <div class="burger__menu" id="burgerMenu">
+                <button class="burger__menu-btn">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="menu">
+                <div>
+                    <a href="/source/pages/index.html"
+                        ><img
+                            class="face"
+                            src="/assets/images/Remove-bg.ai_1700557175860.png"
+                            alt="my face"
+                    /></a>
+                </div>
+                 <a href="/source/pages/index.html" class="main">Главная</a>
+                <a href="/source/pages/index_about.html">Обо мне</a>
+                <a href="/source/pages/index_design.html" class="active">Навыки</a>
+                <a href="/source/pages/index_project.html">Проекты</a>
+                <a href="/source/pages/index_cont.html">Контакты</a>
+                <p>Создано в 2023 г.</p>
+            </div>
+        </div>
 
 		<div class="container">
 			<div class="container__wrap">
@@ -45,7 +53,7 @@
 								• Работа с цветами, шрифтами, векторная графика композицией
 								и&nbsp;визуальной&nbsp;идентичностью
 							</li>
-							<li>• Создание интерактивных интерфейсов дизайна в Figma</li>
+							<li>• Создание интерактивных интерфейсов дизайна&nbsp;в&nbsp;Figma</li>
 						</ul>
 					</div>
 
@@ -70,7 +78,7 @@
 							<li>• Знание HTML5 и CSS3</li>
 							<li>• Опыт адаптивного и кроссбраузерного дизайна</li>
 							<li>• Использование grid сетки в дизайне</li>
-							<li>• Создание сайтов на конструкторе Tilda (+Zero Block)</li>
+							<li>• Создание сайтов на конструкторе Tilda&nbsp;(+Zero&nbsp;Block)</li>
 						</ul>
 					</div>
 				</div>
@@ -235,6 +243,6 @@
 			/></a>
 		</div>
         
-		<!-- <script src="skript.js"></script> -->
+		<script src="/assets/skripts/burger-menu.js"></script>
 	</body>
 </html>

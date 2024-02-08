@@ -26,6 +26,51 @@ a:hover {
   font-weight: 700;
 }
 
+.burger__menu {
+  display: none;
+  position: fixed;
+  width: 35px;
+  height: 38px;
+  left: 20px;
+  top: 4%;
+  z-index: 2;
+}
+
+.burger__menu-btn {
+  margin: auto;
+  border: none;
+}
+
+.burger__menu-btn span {
+  position: absolute;
+  width: 35px;
+  height: 3px;
+  background-color: #ffb92f;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+
+.burger__menu-btn span:nth-child(1) {
+  transform: translateY(-10px);
+}
+
+.container__menu.open .burger__menu-btn span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+  background-color: #f5f5f5;
+}
+
+.container__menu.open .burger__menu-btn span:nth-child(2) {
+  display: none;
+}
+
+.burger__menu-btn span:nth-child(3) {
+  transform: translateY(10px);
+}
+
+.container__menu.open .burger__menu-btn span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+  background-color: #f5f5f5;
+}
+
 .menu {
   max-width: 220px;
   height: 100vh;
@@ -48,6 +93,10 @@ a:hover {
 .menu .active {
   color: #f5f5f5;
   font-weight: 600;
+}
+
+.main {
+  display: none;
 }
 
 .face {
@@ -84,6 +133,30 @@ a:hover {
     width: 100%;
   }
 }
+@media (max-width: 1160px) {
+  .burger__menu {
+    display: block;
+  }
+  .main {
+    display: inline;
+  }
+  .menu {
+    width: 350px;
+    padding: 12% 0 0 0;
+    left: -350px;
+    transition: transform 0.5s;
+  }
+  .menu a {
+    font-size: 24px;
+    margin-left: 20px;
+  }
+  .face {
+    display: none;
+  }
+  .container__menu.open .menu {
+    transform: translateX(350px);
+  }
+}
 body {
   height: 100vh;
 }
@@ -106,6 +179,7 @@ body p {
   margin-top: 2%;
   border-radius: 360px;
   background: #ffb92f;
+  margin-bottom: 10%;
 }
 .container1 a p {
   align-self: center;
@@ -178,7 +252,7 @@ h1 {
   margin-top: 20%;
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
   body {
     display: inline;
   }
@@ -190,7 +264,10 @@ h1 {
     gap: 10px;
   }
   .social {
-    top: 500px;
+    display: inline;
+    left: 25%;
+    top: 780px;
+    border: none;
   }
   .social a {
     margin-left: 10px;
