@@ -261,6 +261,7 @@ function setGridLoaderToEl(domElement, isLoading) {
 	domElement.innerHTML = isLoading ? generateSkeleton(13) : ''
 }
 
+
 // function setGridBtnToEl(domElement, isLoading) {
 //     const generateSkeletonBtn = (count) => {
 //         return [...new Array(count)].map((_, index) => {
