@@ -4,45 +4,13 @@
 @import './base/base';
 @import './base/fixed';
 
-h2 {
-	font-size: clamp(24px, 4vw, 64px);
-	margin: 0 0 40px 0;
-}
-
-.container {
-	margin: 60px 10% 0 280px;
-}
 
 .content__one {
 	display: flex;
-	font-size: clamp(18px, 2vw, 24px);
-	line-height: 200%;
 	gap: 50px;
 
 	p {
 		margin-top: 50px;
-	}
-
-	a {
-		display: flex;
-		justify-content: center;
-		max-width: 300px;
-		min-height: 60px;
-		margin-top: 2%;
-		border-radius: 360px;
-		background: #ffb92f;
-		margin-bottom: 10%;
-
-		p {
-			align-self: center;
-			color: #f5f5f5;
-			display: block;
-			font-size: 18px;
-		}
-
-		&:hover {
-			background: #ec9e00;
-		}
 	}
 }
 
@@ -55,11 +23,8 @@ h2 {
 // Адаптив
 
 @media (max-width: 1440px) {
-	.container {
-		margin: 20px 250px;
-	}
 	.content__one {
-		width: 68vw;
+		width: 74vw;
 		p {
 			margin-top: 0;
 		}
@@ -72,14 +37,7 @@ h2 {
 }
 
 @media (max-width: 1160px) {
-	.container {
-		margin: 10% 10% 0 20%;
-	}
-
 	.foto {
-		display: none;
-	}
-	.social {
 		display: none;
 	}
 }

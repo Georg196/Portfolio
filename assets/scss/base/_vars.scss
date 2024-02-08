@@ -15,5 +15,11 @@ $gray: #d5d5d5;
 $white: #f5f5f5;
 
 // Font-size
-$title: 24px;
-$text: 18px;
+$big-title: clamp(44px, 2vw, 64px);
+$title-main: clamp(24px, 2vw, 56px);
+$title: clamp(18px, 2vw, 24px);
+$text: clamp(14px, 2vw, 18px);
+
+// line-height
+
+$line: 180%;

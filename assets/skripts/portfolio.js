@@ -242,10 +242,7 @@ async function initPortfolioGallery(portfolioArray) {
 			newDiv.innerHTML = `
                 <div style="position: relative">
                     <img src="${item.src}" alt="${item.alt}" />
-                    <div style="position: absolute; bottom: 0; left: 0">
-                        <p class="...">${item.description}</p>
-                    </div>
-                </div> 
+                </div>
             `
 			portfolioRootEl.appendChild(newDiv)
 		})
@@ -273,3 +270,8 @@ function setGridLoaderToEl(domElement, isLoading) {
 
 // 	domElement.innerHTML = isLoading ? generateSkeletonBtn(13) : ''
 // }
+
+
+// ;<div style='position: absolute; bottom: 0; left: 0'>
+// 	<p class='...'>${item.description}</p>
+// </div>

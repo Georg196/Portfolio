@@ -1,10 +1,19 @@
 body {
-    display: flex;
+	display: flex;
 	font-family: $font-main;
 	font-weight: 400;
 	color: $dark;
 	background-color: $white;
 	font-size: 18px;
+}
+
+.container {
+	margin: 60px 10% 0 280px;
+}
+
+h2 {
+	font-size: clamp(24px, 4vw, 64px);
+	margin: 0 0 4% 0;
 }
 
 a {
@@ -15,4 +24,45 @@ a {
 	}
 }
 
+p {
+	font-size: $text;
+	line-height: $line;
+}
 
+button {
+	width: 300px;
+	height: 60px;
+	margin-top: 2%;
+	border-radius: 360px;
+	background: #ffb92f;
+	margin-bottom: 10%;
+	border: 2px solid #ffb92f;
+
+	a {
+		font-family: $font-main;
+		font-weight: 700;
+		color: #f5f5f5;
+		font-size: 18px;
+	}
+
+	:hover {
+		background: #ec9e00;
+	}
+}
+
+@media (max-width: 1440px) {
+	.container {
+		margin: 6% 250px;
+	}
+}
+
+@media (max-width: 1160px) {
+	button {
+		width: 200px;
+		height: 60px;
+	}
+    
+    .container {
+		margin: 10% 2% 0 20%;
+	}
+}

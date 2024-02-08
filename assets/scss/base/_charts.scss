@@ -1,0 +1,162 @@
+.load-circle {
+	$w: 110px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: $w;
+	height: $w;
+
+	&__loader,
+	&__loader-bgr {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: rotate(-90deg);
+
+		&__circle {
+			stroke: #ffb92f;
+			stroke-width: 10;
+			fill: transparent;
+		}
+	}
+
+	&__loader-bgr {
+		&__circle {
+			stroke: $gray;
+		}
+	}
+
+	&__text {
+		display: flex;
+		font-size: $big-title;
+		font-weight: 900;
+	}
+
+	&--90-percent {
+		.load-circle__loader__circle {
+			animation: prixClipFix90 3s forwards linear;
+
+			@keyframes prixClipFix90 {
+				0% {
+					stroke-dasharray: 0, 9999;
+				}
+				100% {
+					stroke-dasharray: calc(2 * 3.1428 * 50 * 0.9), 9999;
+				}
+			}
+		}
+	}
+	&--80-percent {
+		.load-circle__loader__circle {
+			animation: prixClipFix80 3s forwards linear;
+
+			@keyframes prixClipFix80 {
+				0% {
+					stroke-dasharray: 0, 9999;
+				}
+				100% {
+					stroke-dasharray: calc(2 * 3.1428 * 50 * 0.8), 9999;
+				}
+			}
+		}
+	}
+	&--70-percent {
+		.load-circle__loader__circle {
+			animation: prixClipFix70 3s forwards linear;
+
+			@keyframes prixClipFix70 {
+				0% {
+					stroke-dasharray: 0, 9999;
+				}
+				100% {
+					stroke-dasharray: calc(2 * 3.1428 * 50 * 0.7), 9999;
+				}
+			}
+		}
+	}
+	&--60-percent {
+		.load-circle__loader__circle {
+			animation: prixClipFix60 3s forwards linear;
+
+			@keyframes prixClipFix60 {
+				0% {
+					stroke-dasharray: 0, 9999;
+				}
+				100% {
+					stroke-dasharray: calc(2 * 3.1428 * 50 * 0.6), 9999;
+				}
+			}
+		}
+	}
+	&--50-percent {
+		.load-circle__loader__circle {
+			animation: prixClipFix50 3s forwards linear;
+
+			@keyframes prixClipFix50 {
+				0% {
+					stroke-dasharray: 0, 9999;
+				}
+				100% {
+					stroke-dasharray: calc(2 * 3.1428 * 50 * 0.5), 9999;
+				}
+			}
+		}
+	}
+	&--40-percent {
+		.load-circle__loader__circle {
+			animation: prixClipFix40 3s forwards linear;
+
+			@keyframes prixClipFix40 {
+				0% {
+					stroke-dasharray: 0, 9999;
+				}
+				100% {
+					stroke-dasharray: calc(2 * 3.1428 * 50 * 0.4), 9999;
+				}
+			}
+		}
+	}
+	&--30-percent {
+		.load-circle__loader__circle {
+			animation: prixClipFix30 3s forwards linear;
+
+			@keyframes prixClipFix30 {
+				0% {
+					stroke-dasharray: 0, 9999;
+				}
+				100% {
+					stroke-dasharray: calc(2 * 3.1428 * 50 * 0.3), 9999;
+				}
+			}
+		}
+	}
+	&--20-percent {
+		.load-circle__loader__circle {
+			animation: prixClipFix20 3s forwards linear;
+
+			@keyframes prixClipFix20 {
+				0% {
+					stroke-dasharray: 0, 9999;
+				}
+				100% {
+					stroke-dasharray: calc(2 * 3.1428 * 50 * 0.2), 9999;
+				}
+			}
+		}
+	}
+	&--10-percent {
+		.load-circle__loader__circle {
+			animation: prixClipFix10 3s forwards linear;
+
+			@keyframes prixClipFix10 {
+				0% {
+					stroke-dasharray: 0, 9999;
+				}
+				100% {
+					stroke-dasharray: calc(2 * 3.1428 * 50 * 0.1), 9999;
+				}
+			}
+		}
+	}
+}

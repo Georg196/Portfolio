@@ -5,8 +5,8 @@
 	width: 35px;
 	height: 38px;
 	left: 20px;
-	top: 4%;
-	z-index: 2;
+	top: 8%;
+	z-index: 3;
 }
 
 .burger__menu-btn {
@@ -50,6 +50,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 8%;
+	z-index: 2;
 
 	a {
 		color: #111;
@@ -135,6 +136,19 @@
 
 	.container__menu.open .menu {
 		transform: translateX(350px);
+	}
+
+	.social {
+		top: 35%;
+		left: 0;
+		border: none;
+		z-index: -2;
+
+		a {
+			width: 20px;
+			height: 20px;
+			margin: 10px 0 40px 10px;
+		}
 	}
 }
 

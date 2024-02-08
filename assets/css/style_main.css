@@ -19,6 +19,15 @@ body {
   font-size: 18px;
 }
 
+.container {
+  margin: 60px 10% 0 280px;
+}
+
+h2 {
+  font-size: clamp(24px, 4vw, 64px);
+  margin: 0 0 4% 0;
+}
+
 a {
   color: #ffb92f;
 }
@@ -26,14 +35,52 @@ a:hover {
   font-weight: 700;
 }
 
+p {
+  font-size: clamp(14px, 2vw, 18px);
+  line-height: 180%;
+}
+
+button {
+  width: 300px;
+  height: 60px;
+  margin-top: 2%;
+  border-radius: 360px;
+  background: #ffb92f;
+  margin-bottom: 10%;
+  border: 2px solid #ffb92f;
+}
+button a {
+  font-family: "Evolventa";
+  font-weight: 700;
+  color: #f5f5f5;
+  font-size: 18px;
+}
+button :hover {
+  background: #ec9e00;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    margin: 6% 250px;
+  }
+}
+@media (max-width: 1160px) {
+  button {
+    width: 200px;
+    height: 60px;
+  }
+  .container {
+    margin: 10% 2% 0 20%;
+  }
+}
 .burger__menu {
   display: none;
   position: fixed;
   width: 35px;
   height: 38px;
   left: 20px;
-  top: 4%;
-  z-index: 2;
+  top: 8%;
+  z-index: 3;
 }
 
 .burger__menu-btn {
@@ -79,6 +126,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 8%;
+  z-index: 2;
 }
 .menu a {
   color: #111;
@@ -156,6 +204,17 @@ a:hover {
   .container__menu.open .menu {
     transform: translateX(350px);
   }
+  .social {
+    top: 35%;
+    left: 0;
+    border: none;
+    z-index: -2;
+  }
+  .social a {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0 40px 10px;
+  }
 }
 body {
   height: 100vh;
@@ -170,25 +229,6 @@ body p {
   width: 85%;
   margin: 5% 5% 0 10%;
   gap: 6%;
-}
-.container1 a {
-  display: flex;
-  justify-content: center;
-  max-width: 300px;
-  min-height: 60px;
-  margin-top: 2%;
-  border-radius: 360px;
-  background: #ffb92f;
-  margin-bottom: 10%;
-}
-.container1 a p {
-  align-self: center;
-  color: #f5f5f5;
-  display: block;
-  font-size: 18px;
-}
-.container1 a:hover {
-  background: #ec9e00;
 }
 
 .animateButton {
@@ -252,7 +292,7 @@ h1 {
   margin-top: 20%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1160px) {
   body {
     display: inline;
   }
@@ -264,19 +304,6 @@ h1 {
     gap: 10px;
   }
   .social {
-    display: inline;
-    left: 25%;
-    top: 780px;
-    border: none;
-  }
-  .social a {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .social a img {
-    width: 6vh;
-    height: 6vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+    display: none;
   }
 }
