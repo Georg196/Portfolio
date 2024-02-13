@@ -214,6 +214,7 @@ button:hover {
     transform: translateX(350px);
   }
   .social {
+    width: 14%;
     top: 35%;
     left: 0;
     border: none;
@@ -228,22 +229,38 @@ button:hover {
   display: flex;
   gap: 50px;
 }
-.content__one p {
-  margin-top: 50px;
+
+.text__containet {
+  width: clamp(1000px, 2vw, 1500px);
 }
 
 .foto {
+  height: 100%;
   width: 20vw;
   height: 100%;
   transform: rotate(3deg);
 }
 
+.cursor {
+  animation: opacity 0.4s infinite alternate;
+  font-size: clamp(18px, 2vw, 24px);
+}
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+button {
+  margin-top: 8%;
+}
+
 @media (max-width: 1440px) {
   .content__one {
     width: 74vw;
-  }
-  .content__one p {
-    margin-top: 0;
   }
   .animateButton p {
     margin-top: 2%;
