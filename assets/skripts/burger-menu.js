@@ -2,100 +2,103 @@ document.addEventListener('DOMContentLoaded', async function () {
 	document.getElementById('burgerMenu').addEventListener('click', function () {
 		document.querySelector('.container__menu').classList.toggle('open')
 	})
-
-	const text = `Будем знакомы, я Георгий. Мне 27 лет, я живу в Челябинске.
-    По образованию повар-технолог, по профессии веб-дизайнер и
-    фронтенд-разработчик, по призванию христианин. У меня довольно
-    много друзей, надеюсь и с вами мы подружимся! У меня есть
-    любимая жена и чудесный сын.
-    <br /><br />
-    <b>Характер:</b> амбиверт, общительный, дружелюбный,
-    прямолинейный, тактичный, стрессоустойчивый, быстро нахожу
-    решения задач, ответственный, нет вредных привычек. <br /><br />
-    <b>Увлекаюсь:</b> настольными и компьютерными играми, D&D,
-    фэнтези, фильмами, походами. <br /><br />
-    <b>Интересуюсь:</b> литературой связанной с познанием мира,
-    пониманием людей и смысла существования. <br /><br />
-    <b>Мечта:</b> движусь в сторону того, чтобы в ближайшем времени
-    довести навыки фронтенд-разработчика до совершенства, чтобы
-    найти работу мечты. <br /><br />
-    <b>Любимые цитаты:</b><dfn>
-    "В жизни все по настоящему стоящее дается
-    нелегким трудом"</dfn>`
-
-	await initTextMachine(document.querySelector('#text'), text)
-	printBtn()
-
-	function printBtn() {
-		setTimeout(() => {
-			document.querySelector(
-				'#text2'
-			).innerHTML += `<button id="a"><a href="/source/pages/index_design.html" class="animateButton">Дальше →</a></button>`
-		}, 20)
-	}
+    initTextMachine()
 })
 
 // печатная машинка
 
-async function initTextMachine(domElement, text = '') {
-	await typeAnimatedText(text)
+function initTextMachine() {
+	let textContent = document.querySelector('#text')
+	let text = `Будем знакомы, я Георгий. Мне 27 лет, я живу в Челябинске.
+        По образованию повар-технолог, по профессии веб-дизайнер и
+        фронтенд-разработчик, по призванию христианин. У меня довольно
+        много друзей, надеюсь и с вами мы подружимся! У меня есть
+        любимая жена и чудесный сын.
+        <br /><br />
+        <b>Характер:</b> амбиверт, общительный, дружелюбный,
+        прямолинейный, тактичный, стрессоустойчивый, быстро нахожу
+        решения задач, ответственный, нет вредных привычек. <br /><br />
+        <b>Увлекаюсь:</b> настольными и компьютерными играми, D&D,
+        фэнтези, фильмами, походами. <br /><br />
+        <b>Интересуюсь:</b> литературой связанной с познанием мира,
+        пониманием людей и смысла существования. <br /><br />
+        <b>Мечта:</b> движусь в сторону того, чтобы в ближайшем времени
+        довести навыки фронтенд-разработчика до совершенства, чтобы
+        найти работу мечты. <br /><br />
+        <b>Любимые цитаты:</b><dfn>
+        "В жизни все по настоящему стоящее дается
+        нелегким трудом"</dfn>`
 
-	async function typeAnimatedText(text) {
-		let result = ''
-		for (let i = 0; i < text.length; i++) {
-			result += await getNextCharByIndex(text, i)
-			domElement.innerHTML = result
-		}
+	// debugger;
+
+	let text2 = ''
+	let input = i => {
+		setTimeout(() => {
+			text2 += text[i]
+			textContent.innerHTML = text2 + `<span class="cursor">|</span>`
+		}, 20 * i)
 	}
 
-	function getNextCharByIndex(textString, i) {
-		return new Promise(resolve => {
-			setTimeout(() => {
-				resolve(textString[i])
-			}, 20)
-		})
+	for (let i = 0; i < text.length; i++) {
+		input(i)
 	}
+
+	setTimeout(() => {
+		textContent.innerHTML += `<button id="a"><a href="/source/pages/index_design.html" class="animateButton">Дальше →</a></button>`
+	}, 20 * text.length)
 }
 
-// function _initTextMachine() {
-// 	let textContent = document.querySelector('#text')
-// 	let text = `Будем знакомы, я Георгий. Мне 27 лет, я живу в Челябинске.
-//         По образованию повар-технолог, по профессии веб-дизайнер и
-//         фронтенд-разработчик, по призванию христианин. У меня довольно
-//         много друзей, надеюсь и с вами мы подружимся! У меня есть
-//         любимая жена и чудесный сын.
-//         <br /><br />
-//         <b>Характер:</b> амбиверт, общительный, дружелюбный,
-//         прямолинейный, тактичный, стрессоустойчивый, быстро нахожу
-//         решения задач, ответственный, нет вредных привычек. <br /><br />
-//         <b>Увлекаюсь:</b> настольными и компьютерными играми, D&D,
-//         фэнтези, фильмами, походами. <br /><br />
-//         <b>Интересуюсь:</b> литературой связанной с познанием мира,
-//         пониманием людей и смысла существования. <br /><br />
-//         <b>Мечта:</b> движусь в сторону того, чтобы в ближайшем времени
-//         довести навыки фронтенд-разработчика до совершенства, чтобы
-//         найти работу мечты. <br /><br />
-//         <b>Любимые цитаты:</b><dfn>
-//         "В жизни все по настоящему стоящее дается
-//         нелегким трудом"</dfn>`
+// —— Вариант жени в вызове функции:
+// const text = `Будем знакомы, я Георгий. Мне 27 лет, я живу в Челябинске.
+// По образованию повар-технолог, по профессии веб-дизайнер и
+// фронтенд-разработчик, по призванию христианин. У меня довольно
+// много друзей, надеюсь и с вами мы подружимся! У меня есть
+// любимая жена и чудесный сын.
+// <br /><br />
+// <b>Характер:</b> амбиверт, общительный, дружелюбный,
+// прямолинейный, тактичный, стрессоустойчивый, быстро нахожу
+// решения задач, ответственный, нет вредных привычек. <br /><br />
+// <b>Увлекаюсь:</b> настольными и компьютерными играми, D&D,
+// фэнтези, фильмами, походами. <br /><br />
+// <b>Интересуюсь:</b> литературой связанной с познанием мира,
+// пониманием людей и смысла существования. <br /><br />
+// <b>Мечта:</b> движусь в сторону того, чтобы в ближайшем времени
+// довести навыки фронтенд-разработчика до совершенства, чтобы
+// найти работу мечты. <br /><br />
+// <b>Любимые цитаты:</b><dfn>
+// "В жизни все по настоящему стоящее дается
+// нелегким трудом"</dfn>`
 
-// 	// debugger;
+// await initTextMachine(document.querySelector('#text'), text)
+// printBtn()
 
-// 	let text2 = ''
-// 	let input = i => {
-// 		setTimeout(() => {
-// 			text2 += text[i]
-// 			textContent.innerHTML = text2 + `<span class="cursor">|</span>`
-// 		}, 20 * i)
-// 	}
-
-// 	for (let i = 0; i < text.length; i++) {
-// 		input(i)
-// 	}
-
+// function printBtn() {
 // 	setTimeout(() => {
-// 		textContent.innerHTML += `<button id="a"><a href="/source/pages/index_design.html" class="animateButton">Дальше →</a></button>`
-// 	}, 20 * text.length)
+// 		document.querySelector(
+// 			'#text'
+// 		).innerHTML += `<button id="a"><a href="/source/pages/index_design.html" class="animateButton">Дальше →</a></button>`
+// 	}, 20)
+// }
+
+// —— Вариант Жени:
+// async function initTextMachine(domElement, text = '') {
+// 	await typeAnimatedText(text)
+
+// 	async function typeAnimatedText(text) {
+// 		let result = ''
+// 		for (let i = 0; i < text.length; i++) {
+// 			result += await getNextCharByIndex(text, i)
+// 			domElement.innerHTML = result
+// 		}
+// 	}
+
+// 	function getNextCharByIndex(textString, i) {
+// 		return new Promise(resolve => {
+// 			setTimeout(() => {
+// 				resolve(textString[i])
+// 			}, 20)
+// 		})
+// 	}
 // }
 
 //  — загрузка анимации при скроле
