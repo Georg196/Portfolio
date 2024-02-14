@@ -30,139 +30,139 @@ const portfolioSettings = {
 
 const myPortfolio = [
 	{
-		src: '../../assets/images/portfolio/Design/trening.jpg',
+		src: '/assets/images/portfolio/Design/trening.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
-		src: '../../assets/images/portfolio/Design/Trening_slaid.jpg',
+		src: '/assets/images/portfolio/Design/Trening_slaid.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
-		src: '../../assets/images/portfolio/Web/AgroVkus.jpg',
+		src: '/assets/images/portfolio/Web/AgroVkus.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '../../assets/images/portfolio/Front/Calc.png',
+		src: '/assets/images/portfolio/Front/Calc.png',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.front,
 	},
 	{
-		src: '../../assets/images/portfolio/Web/Dom_kulturi.jpg',
+		src: '/assets/images/portfolio/Web/Dom_kulturi.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '../../assets/images/portfolio/Front/Template.jpg',
+		src: '/assets/images/portfolio/Front/Template.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.front,
 	},
 	{
-		src: '../../assets/images/portfolio/Web/Goldray.jpg',
+		src: '/assets/images/portfolio/Web/Goldray.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '../../assets/images/portfolio/Design/Back_to_hte_camp.jpg',
+		src: '/assets/images/portfolio/Design/Back_to_hte_camp.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
-		src: '../../assets/images/portfolio/Design/Back_to_hte_camp_pes.jpg',
+		src: '/assets/images/portfolio/Design/Back_to_hte_camp_pes.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
-		src: '../../assets/images/portfolio/Web/O-mobile.jpg',
+		src: '/assets/images/portfolio/Web/O-mobile.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '../../assets/images/portfolio/Web/LeMank.jpg',
+		src: '/assets/images/portfolio/Web/LeMank.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '../../assets/images/portfolio/Design/Email_ras.jpg',
+		src: '/assets/images/portfolio/Design/Email_ras.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
-		src: '../../assets/images/portfolio/Design/Illustration_TIHH.jpg',
+		src: '/assets/images/portfolio/Design/Illustration_TIHH.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
-		src: '../../assets/images/portfolio/Design/LitleCamp.jpg',
+		src: '/assets/images/portfolio/Design/LitleCamp.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
-		src: '../../assets/images/portfolio/Design/Wireframe-2.jpg',
+		src: '/assets/images/portfolio/Design/Wireframe-2.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
-		src: '../../assets/images/portfolio/Web/OMG.jpg',
+		src: '/assets/images/portfolio/Web/OMG.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '../../assets/images/portfolio/Web/Salbero.jpg',
+		src: '/assets/images/portfolio/Web/Salbero.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '../../assets/images/portfolio/Design/Narnia_roz.jpg',
+		src: '/assets/images/portfolio/Design/Narnia_roz.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
-		src: '../../assets/images/portfolio/Design/Narniabaner.jpg',
+		src: '/assets/images/portfolio/Design/Narniabaner.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
-		src: '../../assets/images/portfolio/Web/Tirs.jpg',
+		src: '/assets/images/portfolio/Web/Tirs.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '../../assets/images/portfolio/Web/TulisovMed.jpg',
+		src: '/assets/images/portfolio/Web/TulisovMed.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
 	{
-		src: '../../assets/images/portfolio/Design/banners_3.jpg',
+		src: '/assets/images/portfolio/Design/banners_3.jpg',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
 	{
-		src: '../../assets/images/portfolio/Front/MyFace.png',
+		src: '/assets/images/portfolio/Front/MyFace.png',
 		alt: '',
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.front,
@@ -260,7 +260,6 @@ function setGridLoaderToEl(domElement, isLoading) {
 
 	domElement.innerHTML = isLoading ? generateSkeleton(13) : ''
 }
-
 
 // function setGridBtnToEl(domElement, isLoading) {
 //     const generateSkeletonBtn = (count) => {

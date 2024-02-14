@@ -215,6 +215,7 @@ button:hover {
     transform: translateX(350px);
   }
   .social {
+    width: 14%;
     top: 35%;
     left: 0;
     border: none;
