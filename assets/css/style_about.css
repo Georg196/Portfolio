@@ -231,7 +231,7 @@ button:hover {
 }
 
 .text__containet {
-  width: clamp(1000px, 2vw, 1500px);
+  width: 52vw;
 }
 
 .foto {
