@@ -41,7 +41,7 @@ function initTextMachine() {
 	}
 
 	setTimeout(() => {
-		textContent.innerHTML += `<button id="a"><a href="/source/pages/index_design.html" class="animateButton">Дальше →</a></button>`
+		textContent.innerHTML += `<button id="a"><a href="../../source/pages/index_design.html" class="animateButton">Дальше →</a></button>`
 	}, 20 * text.length)
 }
 

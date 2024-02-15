@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "Evolventa";
-  src: url(/assets/fonts/Evolventa/Evolventa-Normal.ttf);
+  src: url(../../assets/fonts/Evolventa/Evolventa-Normal.ttf);
 }
 body {
   display: flex;
