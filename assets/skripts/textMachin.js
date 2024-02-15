@@ -33,7 +33,7 @@ function initTextMachine() {
 		setTimeout(() => {
 			text2 += text[i]
 			textContent.innerHTML = text2 + `<span class="cursor">|</span>`
-		}, 20 * i)
+		}, 10 * i)
 	}
 
 	for (let i = 0; i < text.length; i++) {
@@ -42,7 +42,7 @@ function initTextMachine() {
 
 	setTimeout(() => {
 		textContent.innerHTML += `<button id="a"><a href="../../source/pages/index_design.html" class="animateButton">Дальше →</a></button>`
-	}, 20 * text.length)
+	}, 10 * text.length)
 }
 
 // —— Вариант жени в вызове функции:
