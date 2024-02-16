@@ -33,7 +33,7 @@ function initTextMachine() {
 		setTimeout(() => {
 			text2 += text[i]
 			textContent.innerHTML = text2 + `<span class="cursor">|</span>`
-		}, 10 * i)
+		}, 5 * i)
 	}
 
 	for (let i = 0; i < text.length; i++) {
@@ -41,8 +41,8 @@ function initTextMachine() {
 	}
 
 	setTimeout(() => {
-		textContent.innerHTML += `<button id="a"><a href="../../source/pages/index_design.html" class="animateButton">Дальше →</a></button>`
-	}, 10 * text.length)
+		textContent.innerHTML += `<button id="a"><a href="../../source/pages/index_design.html" class="animateButton">Навыки работы →</a></button>`
+	}, 5 * text.length)
 }
 
 // —— Вариант жени в вызове функции:

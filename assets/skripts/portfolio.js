@@ -275,3 +275,40 @@ function setGridLoaderToEl(domElement, isLoading) {
 // ;<div style='position: absolute; bottom: 0; left: 0'>
 // 	<p class='...'>${item.description}</p>
 // </div>
+
+// Функция для открытия модального окна с данными из выбранной картинки
+function openModalWithData(event) {
+    const modal = document.getElementById('modal');
+    const modalContent = document.getElementById('modal-content');
+    const clickedImage = event.target;
+
+    // Вставка данных из атрибутов выбранной картинки
+    const imageSrc = clickedImage.getAttribute('src');
+    const imageAlt = clickedImage.getAttribute('alt');
+    const description = clickedImage.getAttribute('data-description');
+    const image = `<img src="${imageSrc}" alt="${imageAlt}">`;
+    const descriptionHtml = `<p>${description}</p>`;
+    modalContent.innerHTML = image + descriptionHtml;
+
+    modal.style.display = "block";
+}
+
+// Обработчик события для открытия модального окна при клике на картинку
+document.getElementById('portfolio').addEventListener('click', function(event) {
+    if (event.target.tagName === 'IMG') {
+        openModalWithData(event);
+    }
+});
+
+// Функция для закрытия модального окна
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = "none";
+}
+
+// Обработчик события для закрытия модального окна при клике на фон
+document.getElementById('modal').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeModal();
+    }
+});
