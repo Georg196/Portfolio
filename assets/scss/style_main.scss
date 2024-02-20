@@ -6,10 +6,15 @@
 
 body {
 	height: 100vh;
+	// // overflow: hidden;
 
 	p {
 		font-size: clamp(14px, 2vw, 18px);
 	}
+}
+
+canvas {
+	display: block;
 }
 
 .container1 {
@@ -56,21 +61,22 @@ h1 {
 }
 
 .container2 {
-	display: flex;
+	// display: flex;
 	width: 100%;
+	height: 100vh;
+	margin: 0;
 	background-color: #ffb92f;
 
-	img {
-		margin: 0;
-		width: 100%;
-		object-fit: cover;
-	}
+	// img {
+	// 	margin: 0;
+	// 	width: 100%;
+	// 	object-fit: cover;
+	// }
 }
 
 // Соцсети:
 
 .social {
-	// background: #000;
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -89,8 +95,8 @@ h1 {
 @media (max-width: 1370px) {
 	.container1 {
 		padding: auto;
-        margin: 4% 4% 0 10%;
-		gap: 10px;
+		margin: 4% 4% 0 10%;
+		gap: 4%;
 	}
 }
 
