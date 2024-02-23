@@ -152,9 +152,9 @@
 // console.log(text.indexOf('Hel', 1)) // поиск совпадений в строке с конкретного номера буквы
 // console.log(text.includes('Hel')) // поиск совпадений в строке но выдает true \ false
 
-// console.log(text.slice(1, 4)) // вырезать часть строки
-// console.log(text.slice(-4, -1)) // вырезать часть строки
-// console.log(text.slice(2)) // вырезать часть строки
+// console.log(text.splice(1, 4)) // вырезать часть строки
+// console.log(text.splice(-4, -1)) // вырезать часть строки
+// console.log(text.splice(2)) // вырезать часть строки
 
 // 7.МАССИВЫ
 
@@ -190,7 +190,112 @@
 // console.log(matrix[0][0]) // в первых скобках указан индекс элемента массива, во вторых ключ позиции внутри элемента
 // console.log(matrix.length) // длина массива
 
+// методы push и pop выполняются быстро, потому что им не нужно ничего менять; в свою очередь, метод unshift и shift выполняются медленно, потому что им нужно добавить элемент в начало массива, затем переназначить индекс всех элементов массива и изменить свойство length (длинна массива)
+
+// delete matrix[2]
+
+// console.log(matrix)
+// console.log(matrix.length)
+
+// splice позволяет удалять, добавлять и изменять элементы массива
+// let arrOne = ['Goga', 'Alena', 'Sonia', 'Nick', 'Natalia']
+// arrOne.splice(1, 1) // позволят удалять элемент (индекс позиции, кол-во удаляемых эл.)
+// console.log(arrOne)
+
+// let removed = arrOne.splice(1, 2) // позволяет вырезать и передать в новую переменную элемент
+// console.log(removed)
+
+// removed.splice(0, 1, 'Tereza') //заменяет одно один элемент
+// console.log(removed)
+
+// arrOne.splice(0, 0, 'Tereza', 'Gala') //добавляет два элемента перед (позиция эл, обязательно 0 — значит добавление)
+// console.log(arrOne)
+
+// arrOne.splice(-1, 1) // удаляет последний элемент массива (-1 с конца, кол-во эл.)
+// console.log(arrOne)
+
+// создание нового массива:
+// let arrOne = ['Goga', 'Alena', 'Sonia', 'Nick', 'Natalia']
+// let arrTwo = arrOne.slice(1, 2) // вырезает часть массива и передает его новой переменной
+// console.log(arrTwo)
+// console.log(arrOne)
+
+// let arrThree = arrOne.slice(-2, -1) //в новой переменной дает значение вырезаемой предпоследний эл массива
+// console.log(arrThree)
+
+// let arrFour = arrOne.slice() //полностью вырезаем массив и передает его значение новой переменной
+// console.log(arrFour)
+
+// let arrOne = ['Goga', 'Alena', 'Sonia', 'Nick', 'Natalia']
+// let arrTwo = arrOne.concat('Rusya') // создает дубликат массива и дополняет его значение
+// console.log(arrTwo)
+
+// console.log(arrOne.indexOf('Goga')) // поиск в массиве, показывает индекс позиции
+// console.log(arrOne.indexOf('Basya')) // выдаст -1 если нет значения
+// console.log(arrOne.lastIndexOf('Goga', 1)) // также -1 если оно указано с конкретного индекса, после которого уже нет элемента; поиск идет с права на лев
+
+// console.log(arrOne.includes('Goga')) // поиск в массиве, выдает true или false
+// console.log(arrOne.includes('Basya')) // выдаст false если нет значения
+// console.log(arrOne.includes('Goga', 1)) // также false если оно указано с конкретного индекса, после которого уже нет элемента
+
+// Поиск по объектам внутри массивов:
+// let arr = [
+//     {name: 'Goga', age: 27},
+//     {name: 'Kola', age: 2},
+//     {name: 'Alena', age: 'NaN'},
+// ]
+
+// let resOne = arr.find(function (item, index, array){ // функция для возврата целого объекта из массива
+//     return item.age === 2
+// })
+
+// let resOne = arr.find(item => item.age === 2) // такая же как и верхняя, только стрелочная
+// console.log(resOne)
+
+// let resTwo = arr.findIndex(item => item.age === 27) // возвращает позицию элемента
+// console.log(resTwo)
+
+// let resThree = arr.filter(item => item.age <=27) // возвращает массив элементов удовлетворяющих данное условие
+// console.log(resThree)
+
+// Сортировка массивов:
+// let arrOne = [
+// 	'Сарра',
+// 	'Миэль',
+// 	'Лили',
+// 	'Гуга',
+// 	'Мара',
+// 	'Браум',
+// 	'Утер',
+// 	'Бардин',
+// 	'Эийя',
+// ]
+// console.log(arrOne.sort()) // сортирует по алфавиту
+// console.log(arrOne.reverse()) // сортирует по алфавиту в обратном порядке
+
+// let arrTwo = [4, 64, 72, 2, 7, 4, 9, 10, 1, 23]
+// console.log(arrTwo.sort()) // неверное сортирует
+// console.log('9' > '72') // возвращает true потому что другая система измерения
+// console.log(arrTwo.sort((a,b) => a-b)) // стрелочная функция, которая позволяет верно сортировать массив чисел
+
+// Преобразование массива:
+// let arrOne = [
+// 	'Сарра',
+// 	'Миэль',
+// 	'Лили',
+// 	'Гуга',
+// 	'Мара',
+// 	'Браум',
+// 	'Утер',
+// 	'Бардин',
+// 	'Эийя',
+// ]
+
+// let result = arrOne.map(item => item[0])
+// console.log(arrOne)
+// console.log(result)
+ 
+// остановился на 26:35
 
 
-
-
+// можно открыть подсказку по флексбоксам через f1 и вбить CSS Flexbox Cheatsheet
