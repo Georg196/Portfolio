@@ -291,11 +291,58 @@
 // 	'Эийя',
 // ]
 
-// let result = arrOne.map(item => item[0])
+// let result = arrOne.map(item => item[0]) // преобразовывает массив и вызывает функцию для каждого элемента массива (выводит 0 индекс каждого элемента)
 // console.log(arrOne)
 // console.log(result)
- 
-// остановился на 26:35
+
+// let str = 'Дядя | Ваня | хрен столовый'
+// let arr = str.split('|') // позволяет преобразовать строку в массив .split(указать заданный разделитель элементов массива (могу быть , / | . и т.п.))
+// arr = str.split('|', 2) // цифра ограничивает количество элементов
+// console.log(arr)
+
+// let obj = {}
+// let arr = ['Goga', 'Kola', 'Alena']
+// let str = arr.join('|') // преобразование массива в строку с указанием разделителем
+// console.log(str)
+
+// console.log(typeof obj) // в обоих случаях он покажет, что это объекты
+// console.log(typeof arr)
+
+// if (Array.isArray(arr)) { // проверка на массив
+//     console.log('Is Array')
+// } else {
+//     console.log('Is not Array')
+// }
+
+// Перебор массива
+// let arr = ['Сарра', 'Миэль', 'Лили', 'Гуга', 'Мара', 'Браум']
+
+// for (i = 0; i < arr.length; i++) { // перебор массива, каждого элемента
+// 	console.log(arr[i])
+// }
+
+// for (let arrItem of arr) { // также перебор, но новая переменная arrItem берет перебирает значения массива
+//     console.log(arrItem)
+// }
+
+// arr.forEach((item, index, array) => { // метод перебора массива, скорее всего item, index, array являются зарезервированными словами
+//     console.log(`${item} находится на ${index} позиция в массиве: "${array}"`)
+// })
+
+// Домашнее задание:
+// let arrDz = ['Ваня', 'Иштван']
+// arrDz.push('Оля')
+// arrDz.splice(1, 1, 'Petya')
+// dz = arrDz.slice(0, 1)
+// arrDz.slice(0, 1)
+// arrDz.unshift('Masha', 'Pasha')
+// console.log(dz)
+// console.log(arrDz)
 
 
+// 8. DOM 
+
+
+// ——————————————————————————————————————————————————————————————————————————————————————
+// остановился на
 // можно открыть подсказку по флексбоксам через f1 и вбить CSS Flexbox Cheatsheet
