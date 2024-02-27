@@ -342,6 +342,21 @@
 
 // 8. DOM 
 
+const bodyElement = document.body // получить доступ к DOM дереву
+const firstChildNode = bodyElement.firstChild // получить доступ к первому потомку элемента
+const lastChildNode = bodyElement.lastChild // получить доступ к последнему потомку элемента
+
+console.log(bodyElement)
+console.log(firstChildNode)
+console.log(lastChildNode)
+
+const childNodes = bodyElement.childNodes // получить доступ к коллекции DOM дерева (некий массив, но не массив)
+console.log(childNodes)
+console.log(bodyElement.hasChildNodes())
+
+// поиск по конкретным селекторам и классам
+
+
 
 // ——————————————————————————————————————————————————————————————————————————————————————
 // остановился на
