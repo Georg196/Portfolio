@@ -83,12 +83,12 @@ const myPortfolio = [
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
-	{
-		src: '../../assets/images/portfolio/Web/O-mobile.jpg',
-		alt: '',
-		description: 'Lorem100',
-		tagName: portfolioSettings.tagsMap.web,
-	},
+	// {
+	// 	src: '../../assets/images/portfolio/Web/O-mobile.jpg',
+	// 	alt: '',
+	// 	description: 'Lorem100',
+	// 	tagName: portfolioSettings.tagsMap.web,
+	// },
 	{
 		src: '../../assets/images/portfolio/Web/LeMank.jpg',
 		alt: '',
@@ -125,12 +125,12 @@ const myPortfolio = [
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
-	{
-		src: '../../assets/images/portfolio/Web/Salbero.jpg',
-		alt: '',
-		description: 'Lorem100',
-		tagName: portfolioSettings.tagsMap.web,
-	},
+	// {
+	// 	src: '../../assets/images/portfolio/Web/Salbero.jpg',
+	// 	alt: '',
+	// 	description: 'Lorem100',
+	// 	tagName: portfolioSettings.tagsMap.web,
+	// },
 	{
 		src: '../../assets/images/portfolio/Design/Narnia_roz.jpg',
 		alt: '',

@@ -342,22 +342,62 @@
 
 // 8. DOM 
 
-const bodyElement = document.body // получить доступ к DOM дереву
-const firstChildNode = bodyElement.firstChild // получить доступ к первому потомку элемента
-const lastChildNode = bodyElement.lastChild // получить доступ к последнему потомку элемента
+// const bodyElement = document.body // получить доступ к DOM дереву
+// const firstChildNode = bodyElement.firstChild // получить доступ к первому потомку элемента
+// const lastChildNode = bodyElement.lastChild // получить доступ к последнему потомку элемента
 
-console.log(bodyElement)
-console.log(firstChildNode)
-console.log(lastChildNode)
+// console.log(bodyElement)
+// console.log(firstChildNode)
+// console.log(lastChildNode)
 
-const childNodes = bodyElement.childNodes // получить доступ к коллекции DOM дерева (некий массив, но не массив)
-console.log(childNodes)
-console.log(bodyElement.hasChildNodes())
+// const childNodes = bodyElement.childNodes // получить доступ к коллекции DOM дерева (некий массив, но не массив)
+// console.log(childNodes)
+// console.log(bodyElement.hasChildNodes())
 
-// поиск по конкретным селекторам и классам
+// поиск по конкретным селекторам и классам:
 
+// const elemsOne = document.querySelectorAll('.container2') // поиск по классу
+// console.log(elemsOne)
+
+// const elemsTwo = document.querySelectorAll('span') // поиск по тегу
+// console.log(elemsTwo)
+
+// const elemsThree = document.querySelectorAll('p.welcome') // поиск по тегу с конкретным классом
+// console.log(elemsThree)
+
+// const elemsFour = document.querySelectorAll('.skill>span') // поиск по первого дочернего эл по классу
+// console.log(elemsFour)
+
+// const elemsFive = document.querySelectorAll('.container1, .container2') // поиск всех указанных классов
+// console.log(elemsFive)
+
+// const elemsSix = document.querySelectorAll('.container1 .skills') // поиск по вложенным классам
+// console.log(elemsSix)
+
+// const elemsSeven = document.querySelectorAll('#canvas3d') // поиск по id
+// console.log(elemsSeven)
+
+// const elemsEight = document.querySelectorAll('[alt="VK"]') // поиск по атрибуту с конкретным значением
+// console.log(elemsEight)
+
+// const elemsNine = document.querySelectorAll('[alt]') // поиск по атрибуту (все)
+// console.log(elemsNine)
+// console.log(elemsNine[1]) // получаем конкретный объект
+
+// for (const item of elemsNine) { //перебор коллекции
+//     console.log(item)
+// }
+
+// elemsNine.forEach(item=>{console.log(item)}) // перебор коллекции через метод массива (но это не массив)
+
+// const subList = document.querySelectorAll('.container1') // поиск внутри класса
+// const subItems = subList[0].querySelectorAll('a') // все теги только внутри класса container1
+// console.log(subItems)
+
+const lessonList = document.querySelectorAll('span')[3] // поиск конкретного span
+console.log(lessonList)
 
 
 // ——————————————————————————————————————————————————————————————————————————————————————
-// остановился на
+// остановился на 24:51
 // можно открыть подсказку по флексбоксам через f1 и вбить CSS Flexbox Cheatsheet
