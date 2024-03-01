@@ -394,8 +394,42 @@
 // const subItems = subList[0].querySelectorAll('a') // все теги только внутри класса container1
 // console.log(subItems)
 
-const lessonList = document.querySelectorAll('span')[3] // поиск конкретного span
-console.log(lessonList)
+// const lessonListAll = document.querySelectorAll('span')[3] // поиск конкретного span
+// const lessonList = document.querySelector('span') // поиск конкретного span (первого)
+// console.log(lessonList)
+
+// const elem = document.getElementById('canvas3d') // поиск по id
+// console.log(elem)
+
+// живая коллекция:
+// const elems = document.getElementsByTagName('p') // поиск по тегу (возвращает живую коллекцию)
+// console.log(elems)
+
+// elems = document.getElementsByClassName('container2') // поиск по классу (возвращает живую коллекцию)
+// console.log(elems)
+
+// elems = document.getElementsByName('container1') // поиск по атрибуту (возвращает живую коллекцию)
+// console.log(elems)
+
+// живая коллекция отличается от обычной, что она содержит в себе динамически-меняющуюся коллекцию с актуальными данным
+
+// методы проверки: 
+// const elem = document.querySelector('.skill') 
+// const parentList = elem.closest('.container1') // поиск родителя конкретного элемента
+// console.log(parentList)
+
+// const elems = document.querySelectorAll('.container1') 
+// for (let elem of elems) {
+//     if (elem.matches('[class$="welcome"]')) {
+// 			// метод позволяющий найти внутри класса тот же класс + нужный доп класс (если container1 и welcome не будут записаны рядом, ничего не найдется )
+// 			console.log('Все окей, добро пожаловать')
+// 		} else if (elem.matches('[class$="skills"]')) {
+//         console.log('Все окей, скиловый парень')
+// 		}
+// }
+
+
+
 
 
 // ——————————————————————————————————————————————————————————————————————————————————————
