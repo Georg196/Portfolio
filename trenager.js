@@ -340,7 +340,7 @@
 // console.log(arrDz)
 
 
-// 8. DOM 
+// 8. DOM - дерево
 
 // const bodyElement = document.body // получить доступ к DOM дереву
 // const firstChildNode = bodyElement.firstChild // получить доступ к первому потомку элемента
@@ -413,7 +413,7 @@
 
 // живая коллекция отличается от обычной, что она содержит в себе динамически-меняющуюся коллекцию с актуальными данным
 
-// методы проверки: 
+// 8.1 методы проверки: 
 // const elem = document.querySelector('.skill') 
 // const parentList = elem.closest('.container1') // поиск родителя конкретного элемента
 // console.log(parentList)
@@ -428,10 +428,54 @@
 // 		}
 // }
 
+// const text = document.querySelector('.container1') 
+// const list = text.nextElementSibling // можно применить свой-ва навигации по DOM (пример: firstChild и lastChild, parentNode,  previousSibling и nextSibling (все описаны выше))
+// console.log(list)
 
+// 8.2 Изменение DOM:
+// const textElement = document.querySelector('.welcome') // получение узла по классу
+// const textElementContent = textElement.innerHTML // получаем содержимое объекта
+// console.log(textElementContent)
+
+// textElement.innerHTML =	`<p class="welcome">Пошли от сюда нафиг, да побыстрее!</p>` //заменяем содержимое
+// textElement.outerHTML = `<p class="welcome">Пошли от сюда нафиг, да побыстрее!</p>` //заменяем полностью элемент
+// textElement.textContent = `<p class="welcome">Пошли от сюда нафиг, да побыстрее!</p>` //заменяем содержимое и просто перевод всего в текст
+
+// let newText = document.createTextNode('Hello!') // создание текстового узла (текст)
+
+// const textElement = document.querySelector('.container1') // получение узла по классу
+// const newElement = document.createElement('div') // создание элемента (тег)
+// newElement.innerHTML = `<div class="container2"> ... Загрузка ⏳ </div> `
+
+// синтаксис: элемент взаимодействия.позицию(элемент для вставки)
+// textElement.before(newElement) // вставить новый элемент перед объектом
+// textElement.after(newElement) // вставить новый элемент после объектом
+// textElement.prepend(newElement) // вставить новый элемент внутрь объекта перед всем содержимым
+// textElement.append(newElement) // вставить новый элемент внутрь объекта после всего содержимого
+
+// textElement.insertAdjacentHTML( // позволяет вставить элемент, HTML, узел, текст в документ
+// 	'afterend', // позиция куда вставляет (так же 4 как выше)
+// 	`<div class="container2"> AааааааааААааААААааа! Вечная загрузка!!! ⏳ ⏳ ⏳ </div> ` //контент который вставляется
+// )
+
+// все методы вставки автоматически удаляют эл со старых мест
+// const lessonBlock = document.querySelector('.container1') // контеинер внутри которого перенос осуществляется
+// const title = document.querySelector('h1') // элемент который переносят
+// lessonBlock.append(title) // перенос объекта в HTML
+
+// 8.3 клонирование объекта:
+// const textElement = document.querySelector('.skills')
+// // const cloneElement = textElement.cloneNode() // клонирование оболочки (пустые)
+// const cloneElement = textElement.cloneNode(true) // глубокое клонирование со всем содержимым
+// const lessonBlock = document.querySelector('.container1')
+// lessonBlock.prepend(cloneElement)
+
+// cloneElement.remove() // удаление объекта
+
+// 8.4 Изменение классов:
 
 
 
 // ——————————————————————————————————————————————————————————————————————————————————————
-// остановился на 24:51
+// остановился на 50:54
 // можно открыть подсказку по флексбоксам через f1 и вбить CSS Flexbox Cheatsheet
