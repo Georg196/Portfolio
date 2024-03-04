@@ -1,4 +1,8 @@
-// 1. ОПЕРАТОРЫ:
+// // Полезные заметки: 
+// // можно открыть подсказку по флексбоксам через f1 и вбить CSS Flexbox Cheatsheet
+
+
+// // 1. ОПЕРАТОРЫ:
 // let num = 124
 // let str = 'Kykylaco'
 // let strNum = '111'
@@ -11,7 +15,7 @@
 
 // console.log(res ?? 'Error')
 
-// 2. ЦИКЛЫ:
+// // 2. ЦИКЛЫ:
 // let number = 0
 
 // while (number <= 5) {
@@ -27,7 +31,7 @@
 
 // console.log(`Work is stop i = ${i}`)
 
-// 3. ФУНКЦИИ:
+// // 3. ФУНКЦИИ:
 // let mas = 'OOO';
 
 // function glagolName (x) {
@@ -46,7 +50,7 @@
 // // в скобках у функции и условий — это инструкции
 // // бывают переменные и параметры (аргументы) функции (let, 1)
 
-// 4. ОБЪЕКТЫ:
+// // 4. ОБЪЕКТЫ:
 // let myObj = {
 // 	name: 'Goga',
 // 	age: 12,
@@ -69,7 +73,7 @@
 // console.log(myObj?.parents?.mom)
 // console.log(user)
 
-// конструктор объекта:
+// // конструктор объекта:
 // function UserInfo(name, age, work) { // пишется с заглавной буквы имя функции создания объекта
 //     this.name = name;
 //     this.age = age;
@@ -78,7 +82,7 @@
 
 // console.log(new UserInfo('Goga', 132, 'admin'))
 
-// 5. ЧИСЛА:
+// // 5. ЧИСЛА:
 // let num = 1e6 // 1 / 1000000
 // console.log(num)
 // console.log(num.toString(8)) // конвертация в 2, 8, 16-ричную систему
@@ -131,7 +135,7 @@
 // console.log(numOne)
 // // Домашка!!!
 
-// 6.СТРОКИ
+// // 6.СТРОКИ
 // let mes = 'What is it:'
 // let str = `${mes}\nlive?\n\tlie?\n\t\tlove?` // \n позволяет перенести строку, \t добавить табуляцию
 // str = `${mes} странный символ \\ и как написать кавычки \""` // чтобы добавить спецсимвол \ и " " нужно добавить еще один \\
@@ -156,7 +160,7 @@
 // console.log(text.splice(-4, -1)) // вырезать часть строки
 // console.log(text.splice(2)) // вырезать часть строки
 
-// 7.МАССИВЫ
+// // 7.МАССИВЫ
 
 // let mas = [ 	// в массив можно добавлять любой элемент, объект, значение
 // 	'George',
@@ -190,14 +194,14 @@
 // console.log(matrix[0][0]) // в первых скобках указан индекс элемента массива, во вторых ключ позиции внутри элемента
 // console.log(matrix.length) // длина массива
 
-// методы push и pop выполняются быстро, потому что им не нужно ничего менять; в свою очередь, метод unshift и shift выполняются медленно, потому что им нужно добавить элемент в начало массива, затем переназначить индекс всех элементов массива и изменить свойство length (длинна массива)
+// // методы push и pop выполняются быстро, потому что им не нужно ничего менять; в свою очередь, метод unshift и shift выполняются медленно, потому что им нужно добавить элемент в начало массива, затем переназначить индекс всех элементов массива и изменить свойство length (длинна массива)
 
 // delete matrix[2]
 
 // console.log(matrix)
 // console.log(matrix.length)
 
-// splice позволяет удалять, добавлять и изменять элементы массива
+// // splice позволяет удалять, добавлять и изменять элементы массива
 // let arrOne = ['Goga', 'Alena', 'Sonia', 'Nick', 'Natalia']
 // arrOne.splice(1, 1) // позволят удалять элемент (индекс позиции, кол-во удаляемых эл.)
 // console.log(arrOne)
@@ -214,7 +218,7 @@
 // arrOne.splice(-1, 1) // удаляет последний элемент массива (-1 с конца, кол-во эл.)
 // console.log(arrOne)
 
-// создание нового массива:
+// // создание нового массива:
 // let arrOne = ['Goga', 'Alena', 'Sonia', 'Nick', 'Natalia']
 // let arrTwo = arrOne.slice(1, 2) // вырезает часть массива и передает его новой переменной
 // console.log(arrTwo)
@@ -238,7 +242,7 @@
 // console.log(arrOne.includes('Basya')) // выдаст false если нет значения
 // console.log(arrOne.includes('Goga', 1)) // также false если оно указано с конкретного индекса, после которого уже нет элемента
 
-// Поиск по объектам внутри массивов:
+// // Поиск по объектам внутри массивов:
 // let arr = [
 //     {name: 'Goga', age: 27},
 //     {name: 'Kola', age: 2},
@@ -258,7 +262,7 @@
 // let resThree = arr.filter(item => item.age <=27) // возвращает массив элементов удовлетворяющих данное условие
 // console.log(resThree)
 
-// Сортировка массивов:
+// // Сортировка массивов:
 // let arrOne = [
 // 	'Сарра',
 // 	'Миэль',
@@ -278,7 +282,7 @@
 // console.log('9' > '72') // возвращает true потому что другая система измерения
 // console.log(arrTwo.sort((a,b) => a-b)) // стрелочная функция, которая позволяет верно сортировать массив чисел
 
-// Преобразование массива:
+// // Преобразование массива:
 // let arrOne = [
 // 	'Сарра',
 // 	'Миэль',
@@ -314,7 +318,7 @@
 //     console.log('Is not Array')
 // }
 
-// Перебор массива
+// // Перебор массива
 // let arr = ['Сарра', 'Миэль', 'Лили', 'Гуга', 'Мара', 'Браум']
 
 // for (i = 0; i < arr.length; i++) { // перебор массива, каждого элемента
@@ -329,7 +333,7 @@
 //     console.log(`${item} находится на ${index} позиция в массиве: "${array}"`)
 // })
 
-// Домашнее задание:
+// // Домашнее задание:
 // let arrDz = ['Ваня', 'Иштван']
 // arrDz.push('Оля')
 // arrDz.splice(1, 1, 'Petya')
@@ -340,7 +344,7 @@
 // console.log(arrDz)
 
 
-// 8. DOM - дерево
+// // 8. DOM - дерево
 
 // const bodyElement = document.body // получить доступ к DOM дереву
 // const firstChildNode = bodyElement.firstChild // получить доступ к первому потомку элемента
@@ -354,7 +358,7 @@
 // console.log(childNodes)
 // console.log(bodyElement.hasChildNodes())
 
-// поиск по конкретным селекторам и классам:
+// // поиск по конкретным селекторам и классам:
 
 // const elemsOne = document.querySelectorAll('.container2') // поиск по классу
 // console.log(elemsOne)
@@ -401,7 +405,7 @@
 // const elem = document.getElementById('canvas3d') // поиск по id
 // console.log(elem)
 
-// живая коллекция:
+// // живая коллекция:
 // const elems = document.getElementsByTagName('p') // поиск по тегу (возвращает живую коллекцию)
 // console.log(elems)
 
@@ -411,9 +415,9 @@
 // elems = document.getElementsByName('container1') // поиск по атрибуту (возвращает живую коллекцию)
 // console.log(elems)
 
-// живая коллекция отличается от обычной, что она содержит в себе динамически-меняющуюся коллекцию с актуальными данным
+// // живая коллекция отличается от обычной, что она содержит в себе динамически-меняющуюся коллекцию с актуальными данным
 
-// 8.1 методы проверки: 
+// // 8.1 методы проверки: 
 // const elem = document.querySelector('.skill') 
 // const parentList = elem.closest('.container1') // поиск родителя конкретного элемента
 // console.log(parentList)
@@ -432,7 +436,7 @@
 // const list = text.nextElementSibling // можно применить свой-ва навигации по DOM (пример: firstChild и lastChild, parentNode,  previousSibling и nextSibling (все описаны выше))
 // console.log(list)
 
-// 8.2 Изменение DOM:
+// // 8.2 Изменение DOM:
 // const textElement = document.querySelector('.welcome') // получение узла по классу
 // const textElementContent = textElement.innerHTML // получаем содержимое объекта
 // console.log(textElementContent)
@@ -447,7 +451,7 @@
 // const newElement = document.createElement('div') // создание элемента (тег)
 // newElement.innerHTML = `<div class="container2"> ... Загрузка ⏳ </div> `
 
-// синтаксис: элемент взаимодействия.позицию(элемент для вставки)
+// // синтаксис: элемент взаимодействия.позицию(элемент для вставки)
 // textElement.before(newElement) // вставить новый элемент перед объектом
 // textElement.after(newElement) // вставить новый элемент после объектом
 // textElement.prepend(newElement) // вставить новый элемент внутрь объекта перед всем содержимым
@@ -458,12 +462,12 @@
 // 	`<div class="container2"> AааааааааААааААААааа! Вечная загрузка!!! ⏳ ⏳ ⏳ </div> ` //контент который вставляется
 // )
 
-// все методы вставки автоматически удаляют эл со старых мест
+// // все методы вставки автоматически удаляют эл со старых мест
 // const lessonBlock = document.querySelector('.container1') // контеинер внутри которого перенос осуществляется
 // const title = document.querySelector('h1') // элемент который переносят
 // lessonBlock.append(title) // перенос объекта в HTML
 
-// 8.3 клонирование объекта:
+// // 8.3 клонирование объекта:
 // const textElement = document.querySelector('.skills')
 // // const cloneElement = textElement.cloneNode() // клонирование оболочки (пустые)
 // const cloneElement = textElement.cloneNode(true) // глубокое клонирование со всем содержимым
@@ -472,10 +476,92 @@
 
 // cloneElement.remove() // удаление объекта
 
-// 8.4 Изменение классов:
+// // 8.4 Изменение классов:
+// const element = document.querySelector('.welcome')
+// const elementClassName = element.className // получение всех возможных классов элемента
+// console.log(elementClassName)
+
+// element.className = 'Goodbye' // метод, который затирает все классы и присваивает новый
+// // метод classList позволяет получить доступ к атрибуту класс:
+// element.classList.add('active') // добавляет новый класс
+// element.classList.remove('active') // удаляет класс
+// element.classList.toggle('active') // добавляет новый класс, если его нет / удаляет класс если он есть
+// element.classList.contains('active') // позволяет проверить, существует ли такой класс у данного элемента
+
+// if (element.classList.contains('welcome')) { // если у элемента есть нужный класс, то применяет код
+//     console.log('У элемента есть класс welcome!')
+// }
+
+// for (let className of element.classList) { // позволяет перебрать все классы объекта
+//     console.log(className)
+// }
+
+// // 8.5 Изменение стилей
+// // обязательно свойство писать через CamelCase, а в "значение"
+// element.style.color = 'red'
+// element.style.marginBottom = '50px'
+// element.style.zIndex = '10'
+// console.log(element.style.marginBottom) // чтобы получить значение свойства класс
+
+// // полная перезапись стилей:
+// element.style.cssText = `
+//  margin-bottom: 100px;
+//  color: red;
+//  `
+
+// // стиль элемента
+// console.log(element.style.margin) // у данного класса нет отдельного значения, поэтому проверка даст пустую строку
+// const elementStyle = getComputedStyle(element) // возвращает вычисленные стили элемента
+// console.log(elementStyle.margin) // получаем его значение
+
+// // стиль псевдоэлемента
+// const elementBeforeStyle = getComputedStyle(element, '::before') // возвращает вычисленные стили псевдоэлемента
+// console.log(elementBeforeStyle.backgroundColor) // получаем его значение
+
+// console.log(parseInt(element.style.marginBottom)) // получаем значение свойства margin-bottom в виде числа (parseInt)
+
+// // 9. Атрибуты и свойства:
+
+// const link = document.querySelector('.animateButton')
+// const input = document.querySelector('.input')
+// console.log(link.href) // если элемент-тег ссылка, можно получить его значение через href
+// console.log(input.href) // будет undefined
+// console.log(input.value) // если элемент-тег импут, можно получить его значение через value
+// console.log(link.value) // будет undefined
+// console.dir(link) // список всех доступных свойств
+// console.dir(input) // список всех доступных свойств
+
+// const element = document.querySelector('.welcome')
+// element.hasAttribute('name') // проверяет, существует ли атрибут name
+// element.getAttribute('name') // возвращает значение атрибута name
+// element.setAttribute('name', 'value') // устанавливает значение атрибута name
+// element.removeAttribute('name') // удаляет атрибут name
+
+// element.setAttribute('id', 'hello')
+// if (element.hasAttribute('id')) { // проверяет, существует
+//     console.log('У элемента есть атрибут id')
+// }
+
+// // синхронизация между атрибутами и свойствами
+// const el = document.querySelector('.welcome') 
+// el.setAttribute('id', 'hello') // устанавливает значение атрибута id
+// console.log(el.id) 
+// el.id = '12155' // перезаписывает значение атрибута id
+// console.log(el.getAttribute('id'))
+
+// el.setAttribute('data-size-text', '1058') // устанавливает значение атрибута data-size
+// console.log(el.dataset.sizeText) // возвращает значение атрибута data-size, все имена с префексами data зарезервированн
+// el.dataset.sizeText = '2030' // перезаписывает значение атрибута data-size
+// console.log(el.dataset.sizeText)
+
+// console.log(el.tagName) // возвращает тег элемента
+// el.hidden = true // устанавливает значение атрибута hidden (скрывает элемент)
+// console.log(el.hidden)
 
 
 
-// ——————————————————————————————————————————————————————————————————————————————————————
-// остановился на 50:54
-// можно открыть подсказку по флексбоксам через f1 и вбить CSS Flexbox Cheatsheet
+
+
+
+// // остановился на 
+

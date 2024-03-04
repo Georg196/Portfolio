@@ -229,6 +229,7 @@ button:hover {
 }
 body {
   height: 100vh;
+  overflow: hidden;
 }
 body p {
   font-size: clamp(14px, 2vw, 18px);
@@ -320,6 +321,7 @@ h1 {
 @media (max-width: 1160px) {
   body {
     display: inline;
+    overflow: auto;
   }
   .model_3D {
     display: none;
