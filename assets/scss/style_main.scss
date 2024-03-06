@@ -15,10 +15,15 @@ body {
 
 .model_3D {
 	width: 100%;
-    height: 100%;
+	height: 100%;
+}
+
+.loader-3D {
+	text-align: center;
 }
 
 .container1 {
+    // position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 85%;
@@ -71,7 +76,7 @@ h1 {
 	img {
 		display: none;
 		width: 100%;
-        height: auto;
+		height: auto;
 		object-fit: cover;
 	}
 }
@@ -105,15 +110,19 @@ h1 {
 @media (max-width: 1160px) {
 	body {
 		display: inline;
-        overflow: auto;
+		overflow: auto;
 	}
 
 	.model_3D {
 		display: none;
 	}
 
+	.loader-3D {
+		display: none;
+	}
+
 	.container2 {
-        height: 50%;
+		height: 50%;
 		img {
 			display: block;
 		}

@@ -1,6 +1,5 @@
-// // Полезные заметки: 
+// // Полезные заметки:
 // // можно открыть подсказку по флексбоксам через f1 и вбить CSS Flexbox Cheatsheet
-
 
 // // 1. ОПЕРАТОРЫ:
 // let num = 124
@@ -343,7 +342,6 @@
 // console.log(dz)
 // console.log(arrDz)
 
-
 // // 8. DOM - дерево
 
 // const bodyElement = document.body // получить доступ к DOM дереву
@@ -417,12 +415,12 @@
 
 // // живая коллекция отличается от обычной, что она содержит в себе динамически-меняющуюся коллекцию с актуальными данным
 
-// // 8.1 методы проверки: 
-// const elem = document.querySelector('.skill') 
+// // 8.1 методы проверки:
+// const elem = document.querySelector('.skill')
 // const parentList = elem.closest('.container1') // поиск родителя конкретного элемента
 // console.log(parentList)
 
-// const elems = document.querySelectorAll('.container1') 
+// const elems = document.querySelectorAll('.container1')
 // for (let elem of elems) {
 //     if (elem.matches('[class$="welcome"]')) {
 // 			// метод позволяющий найти внутри класса тот же класс + нужный доп класс (если container1 и welcome не будут записаны рядом, ничего не найдется )
@@ -432,7 +430,7 @@
 // 		}
 // }
 
-// const text = document.querySelector('.container1') 
+// const text = document.querySelector('.container1')
 // const list = text.nextElementSibling // можно применить свой-ва навигации по DOM (пример: firstChild и lastChild, parentNode,  previousSibling и nextSibling (все описаны выше))
 // console.log(list)
 
@@ -543,9 +541,9 @@
 // }
 
 // // синхронизация между атрибутами и свойствами
-// const el = document.querySelector('.welcome') 
+// const el = document.querySelector('.welcome')
 // el.setAttribute('id', 'hello') // устанавливает значение атрибута id
-// console.log(el.id) 
+// console.log(el.id)
 // el.id = '12155' // перезаписывает значение атрибута id
 // console.log(el.getAttribute('id'))
 
@@ -558,10 +556,110 @@
 // el.hidden = true // устанавливает значение атрибута hidden (скрывает элемент)
 // console.log(el.hidden)
 
+// // 10. Прокрутка и окно браузера:
+
+// const mainElement = document.documentElement
+
+// const mainElementWidth = mainElement.clientWidth // получаем ширину элемента (не включает в себя полосы прокрутку)
+// const mainElementHeight = mainElement.clientHeight // получаем высоту элемента (не включает в себя полосы прокрутку)
+// console.log(mainElementWidth)
+// console.log(mainElementHeight)
+
+// const windowWidth = window.innerWidth // получаем ширину браузера (включая полосы прокрутки)
+// const windowHeight = window.innerHeight // возвращаем высоту браузера (включая полосы прокрутки)
+// console.log(windowWidth)
+// console.log(windowHeight)
+
+// // получить максимальную высоту и ширину браузера
+// let scrollWidth = Math.max( // получаем максимальное значение ширины браузера
+// 	document.body.scrollWidth,
+// 	document.documentElement.scrollWidth,
+// 	document.body.offsetWidth,
+// 	document.documentElement.offsetWidth,
+// 	document.body.clientWidth,
+// 	document.documentElement.clientWidth
+// )
+// console.log( // для просмотра всех значений ширины
+// 	document.body.scrollWidth,
+// 	document.documentElement.scrollWidth,
+// 	document.body.offsetWidth,
+// 	document.documentElement.offsetWidth,
+// 	document.body.clientWidth,
+// 	document.documentElement.clientWidth
+// )
+// console.log(scrollWidth)
+
+// let scrollHeight = Math.max( // получаем максимальное значение высоты браузера
+// 	document.body.scrollHeight,
+// 	document.documentElement.scrollHeight,
+// 	document.body.offsetHeight,
+// 	document.documentElement.offsetHeight,
+// 	document.body.clientHeight,
+// 	document.documentElement.clientHeight
+// )
+// console.log( // для просмотра всех значений высоты
+// 	document.body.scrollHeight,
+// 	document.documentElement.scrollHeight,
+// 	document.body.offsetHeight,
+// 	document.documentElement.offsetHeight,
+// 	document.body.clientHeight,
+// 	document.documentElement.clientHeight
+// )
+// console.log(scrollHeight)
+
+// // получение значения скролла
+// const windowScrollTop = window.pageXOffset
+// const windowScrollLeft = window.pageYOffset
+// console.log(windowScrollTop)
+// console.log(windowScrollLeft)
+
+// // управление прокруткой страницы по px
+// function setScrollBy() {
+// 	window.scrollBy(0, 50) // значения (горизонтальная прокрутка, вертикальная прокрутка) +50px к актуальной позиции
+// 	const windowScrollTop = window.pageYOffset
+// 	console.log(windowScrollTop)
+// }
+
+// function setScrollToOptions() {
+// 	window.scrollTo({
+// 		top: 100, // скролит на 100px от самого верху
+// 		left: 0,
+// 		behavior: 'smooth', // smooth, instant, auto (плавная прокрутка, не плавная, автоматическая прокрутка)
+// 	})
+// }
+
+// // прокрутка к нужному элементу
+// function setScrollIntoView(top) {
+//     const lessonSelected = document.querySelector('.lesson-selected')
+//     lessonSelected.scrollIntoView(top)
+// }
+
+// function setScrollIntoViewOptions(top) {
+//     const lessonSelected = document.querySelector('.lesson-selected')
+//     lessonSelected.scrollIntoView({
+//         behavior:'smooth', // smooth, instant, auto (плавная прокрутка, не плавная, автоматическая прокрутка)
+//         block: 'center', // center, start, end, nearest
+//         inline: 'center', // center, start, end, nearest
+//     })
+// }
+
+// // запретить прокрутку
+// function setEnableDisableScroll() {
+//     // document.body.style.overflow = 'hidden'
+//     document.body.classList.toggle('disable-scroll')
+// }
+
+// метрика элементов
+const block = document.querySelector('.skills')
+const elOffsetParent = block.offsetParent
+console.log(elOffsetParent)
+
+const elOffsetLeft = block.offsetLeft
+const elOffsetTop = block.offsetTop
+console.log(elOffsetLeft)
+console.log(elOffsetTop)
 
 
 
 
-
-// // остановился на 
-
+// // остановился на 19.05

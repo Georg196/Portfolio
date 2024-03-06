@@ -240,6 +240,10 @@ body p {
   height: 100%;
 }
 
+.loader-3D {
+  text-align: center;
+}
+
 .container1 {
   display: flex;
   flex-direction: column;
@@ -324,6 +328,9 @@ h1 {
     overflow: auto;
   }
   .model_3D {
+    display: none;
+  }
+  .loader-3D {
     display: none;
   }
   .container2 {
