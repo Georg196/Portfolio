@@ -252,12 +252,6 @@ body p {
   gap: 6%;
 }
 
-.animateButton {
-  transition: background-color 0.5s ease;
-  outline: none;
-  border: none;
-}
-
 /* содержимое */
 .welcome {
   font-size: clamp(18px, 2vw, 24px);

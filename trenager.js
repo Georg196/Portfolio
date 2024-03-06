@@ -649,17 +649,63 @@
 //     document.body.classList.toggle('disable-scroll')
 // }
 
-// метрика элементов
-const block = document.querySelector('.skills')
-const elOffsetParent = block.offsetParent
-console.log(elOffsetParent)
+// // метрика элементов
+// const block = document.querySelector('.object-block')
+// const elOffsetParent = block.offsetParent // получаем значение атрибута offset-parent получаем родительский элемент. Если его значение display отсутствует, получаем родительский элемент выше
+// console.log(elOffsetParent)
 
-const elOffsetLeft = block.offsetLeft
-const elOffsetTop = block.offsetTop
-console.log(elOffsetLeft)
-console.log(elOffsetTop)
+// const elOffsetLeft = block.offsetLeft // получаем значение атрибута left
+// const elOffsetTop = block.offsetTop // получаем значение атрибута top
+// console.log(elOffsetLeft)
+// console.log(elOffsetTop)
+
+// const elOffsetWidth = block.offsetWidth // возвращаем значение атрибута width
+// const elOffsetHeight = block.offsetHeight //  возвращаем значение атрибута height
+// console.log(elOffsetWidth)
+// console.log(elOffsetHeight)
+
+// const elClientTop = block.clientTop //  возвращаем значение внутреннего отступа сверху
+// const elClientLeft = block.clientLeft //  возвращаем значение внутреннего отступа слева
+// console.log(elClientTop)
+// console.log(elClientLeft)
+
+// const elClientWidth = block.clientWidth  //  возвращаем значение внутреннего отступа ширины
+// const elClientHeight = block.clientHeight //  возвращаем значение внутреннего отступа высоты
+// console.log(elClientWidth)
+// console.log(elClientHeight)
+
+// const elScrollWidth = block.scrollWidth  //  возвращаем значение ширины скрола
+// const elScrollHeight = block.scrollHeight //  возвращаем значение высоты скрола (невидимой части)
+// console.log(elScrollWidth)
+// console.log(elScrollHeight)
+
+// block.scrollTop = 150;
+// const elScrollLeft = block.scrollLeft  //  возвращаем значение ширины скрола слева
+// const elScrollTop = block.scrollTop //  возвращаем значение высоты скрола сверху 
+// console.log(elScrollLeft)
+// console.log(elScrollTop)
+
+// function setElementScrollBy() {
+//     block.scrollBy ({
+//         top: 100, // скролит на 100px от самого верху
+//         left: 0,
+//         behavior:'smooth', // smooth, instant, auto (плавная прокрутка, не плавная, автоматическая прокрутка)
+//     })
+// }
+
+// const item = document.querySelector('.skills')
+// const getItemCoords = item.getBoundingClientRect() // получаем координаты элемента
+// let getItemCoords1 = item.getBoundingClientRect().top // возвращаем конкретные координаты элемента слева
+// let getItemCoords2 = getItemCoords1 + window.pageYOffset // возвращаем конкретные координаты элемента сверх относительно высоты браузера
+// console.log(getItemCoords)
+// console.log(getItemCoords1)
+// console.log(getItemCoords2)
+
+// const el = document.elementFromPoint(200, 100) // получаем элемент по координатам клика
+// console.log(el)
+
+// // 11. События в JS: 
 
 
 
-
-// // остановился на 19.05
+// // остановился на 
