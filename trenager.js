@@ -520,7 +520,7 @@
 
 // // 9. Атрибуты и свойства:
 
-// const link = document.querySelector('.animateButton')
+// const link = document.querySelector('.btn')
 // const input = document.querySelector('.input')
 // console.log(link.href) // если элемент-тег ссылка, можно получить его значение через href
 // console.log(input.href) // будет undefined
@@ -681,7 +681,7 @@
 
 // block.scrollTop = 150;
 // const elScrollLeft = block.scrollLeft  //  возвращаем значение ширины скрола слева
-// const elScrollTop = block.scrollTop //  возвращаем значение высоты скрола сверху 
+// const elScrollTop = block.scrollTop //  возвращаем значение высоты скрола сверху
 // console.log(elScrollLeft)
 // console.log(elScrollTop)
 
@@ -704,8 +704,116 @@
 // const el = document.elementFromPoint(200, 100) // получаем элемент по координатам клика
 // console.log(el)
 
-// // 11. События в JS: 
+// // 11. События в JS:
+
+// // можно писать код в HTML, пример: onclick="console.log('Переход')"
+// const btn = document.querySelector('.btn') // получаем доступ через класс btn
+// btn.onclick = () => {console.log('Переход!')} // вызываем функцию, которая будет производить действие при клике на кнопку
+
+// function showClick() {
+//     console.log('Переход!')
+// }
+// btn.onclick = showClick // идентичное действие как выше, только функция отдельна; важно писать без круглых скобок, чтобы не вызвать её автоматически сразу (не showClick()!!!)
+// // метод выше будет перезаписывать событие, так как он уже существует, btn.onclick будет применяться самое нижнее
+
+// // Метод, который позволяет навесить множество событий: элемент.addEventListener('событие', имя функции или функцию без имени[, параметры]):
+// btn.addEventListener('click', () => {console.log('Биба')})
+// btn.addEventListener('click', () => {console.log('Боба')})
+
+// function showClick() {console.log('Боба'); btn.removeEventListener('click', showClick)} // removeEventListener позволяет удалить событие, снимает обработчик прослушивания события
+// btn.addEventListener('click', showClick) // идентичное действие как выше, только функция вынесена отдельно
+
+// // параметры addEventListener:
+// const options = {
+//     'capture': false, // фаза на которой должен сработать обработчик события
+//     'once': true, // если true, то событие будет автоматически удалено после выполнения
+//     'passive': false // если true, то указывает, что обработчик никогда не вызовет preventDefault()
+// }
+// btn.addEventListener('click', showClick, options) // в параметры можно записать переменную или сразу же значение
+
+// // 11.1 объект событий:
+// function showClick(event) {
+//     console.log(event.type) // тип события
+//     console.log(event.target) // элемент, на который срабатывает обработчик события
+//     console.log(event.currentTarget) // элемент, к которому назначен обработчик события
+//     console.log(event.clientX) // координаты клика по оси X (курсора)
+//     console.log(event.clientY) // координаты клика по оси Y (курсора)
+//     console.log(event) // все детали события
+// }
+
+// // 11.2 всплытие:
+// const block1 = document.querySelector('.block1') // объект как матрешка вложенный друг в друга
+// const block2 = document.querySelector('.block2') // объект как матрешка вложенный, второго уровня
+// const block3 = document.querySelector('.block3') // объект как матрешка вложенный, третьего уровня
+
+// block1.addEventListener('click', (event) => {
+//     console.log('клик на блок первого уровня')
+//     console.log(event.target)
+// })
+
+// block2.addEventListener('click', (event) => {
+//     console.log('клик на блок второго уровня')
+// },{'capture': true}) // позволяет погрузить объект более ниже по уровню z
+
+// block3.addEventListener('click', (event) => {
+//     console.log('клик на блок третьего уровня') // изначально, если кликнуть по блоку 3, два предыдущих тоже откликнуться (всплывут)
+//     event.stopPropagation() // позволяет остановить всплытие нижних уровней
+// })
+
+// // 11.3 делегирование событий:
+
+// const btn = document.querySelectorAll('button')
+// function showClick() {
+//     console.log('Клик!')
+// }
+// btn.forEach(btnItem => {btnItem.addEventListener('click', showClick)}) // проходим через метод перебора и навешиваем на каждый элемент btn событие и вызов функцию showClick()
+// // данный способ сильно напрягает браузер, поэтому лучше использовать нижний пример
+
+// const lesson = document.querySelector('.skills')
+
+// function showClick() {
+//     console.log('Могу, умею, практикую!')
+// }
+
+// lesson.addEventListener('click', (event) => {
+//     if (event.target.closest('span')) { // если кликнули на спан, тогда выполняем функцию showClick() (получаем объект взаимодействия.проверяем тип элемента(тип элемента))
+//         showClick()
+//     }
+// })
+
+// // 11.4 действия браузера:
+
+// const link = document.querySelector('.btn')
+
+// link.addEventListener('click', (event) => {
+//     console.log('Клик!')
+//     event.preventDefault() // отменяем стандартное действие браузера
+// },{'passive': true}) // позволяет отменить preventDefault и отработать код
+
+// link.onclick = () => {
+//     console.log('Клик!')
+//     return false // отменяем стандартное действие браузера
+// }
+
+// // 11.5 события курсора мыши:
+
+// const btn = document.querySelector('.btn')
+// btn.addEventListener('mousedown', event => {
+// 	console.log(`Клик ${event.which}!`)
+//     event.preventDefault()
+// })
+// btn.addEventListener('click', event => {
+// 	console.log(`Клик основной ПКМ!`)
+// 	event.preventDefault()
+// })
+// btn.addEventListener('contextmenu', event => {
+// 	console.log(`Вызвано контекстное меню (не основная кнопка мыши)`)
+//     event.preventDefault()
+// })
+
+const blockForMouse = document.querySelector('.container2')
+blockForMouse.addEventListener('mousemove', (event) => {blockForMouse.innerHTML = `clientX - ${event.clientX} <br> clientY - ${event.clientY}`})
 
 
 
-// // остановился на 
+// // остановился на 33:40
