@@ -812,8 +812,25 @@
 // })
 
 const blockForMouse = document.querySelector('.container2')
-blockForMouse.addEventListener('mousemove', (event) => {blockForMouse.innerHTML = `clientX - ${event.clientX} <br> clientY - ${event.clientY}`})
+// blockForMouse.addEventListener('mousemove', (event) => {blockForMouse.innerHTML = `clientX - ${event.clientX} <br> clientY - ${event.clientY}`})
+
+// blockForMouse.addEventListener('mouseover', event => {
+// 	blockForMouse.innerHTML = 'Курсор над элементом'
+// 	console.log(event.target) // позволяет отследить курсор над элементом
+// 	console.log(event.relatedTarget) // позволяет отследить куда переходит курсор с элемента
+// })
+// blockForMouse.addEventListener('mouseout', event => {
+// 	blockForMouse.innerHTML = 'Курсор уходит с элемента'
+// 	console.log(event.target) 
+// 	console.log(event.relatedTarget)
+// })
+blockForMouse.addEventListener('mouseenter', event => { // позволяет отследить курсор над элемента, не вызывает всплывание дочерних элементов
+	blockForMouse.innerHTML = 'Курсор над элемента'
+})
+blockForMouse.addEventListener('mouseleave', event => { // позволяет отследить когда курсор уходит с элемента, не вызывает всплывание дочерних элементов
+	blockForMouse.innerHTML = 'Курсор уходит с элемента'
+})
 
 
 
-// // остановился на 33:40
+// // остановился на 38:40
