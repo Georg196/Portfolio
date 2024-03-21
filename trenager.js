@@ -732,6 +732,7 @@
 // btn.addEventListener('click', showClick, options) // в параметры можно записать переменную или сразу же значение
 
 // // 11.1 объект событий:
+
 // function showClick(event) {
 //     console.log(event.type) // тип события
 //     console.log(event.target) // элемент, на который срабатывает обработчик события
@@ -742,6 +743,7 @@
 // }
 
 // // 11.2 всплытие:
+
 // const block1 = document.querySelector('.block1') // объект как матрешка вложенный друг в друга
 // const block2 = document.querySelector('.block2') // объект как матрешка вложенный, второго уровня
 // const block3 = document.querySelector('.block3') // объект как матрешка вложенный, третьего уровня
@@ -811,7 +813,7 @@
 //     event.preventDefault()
 // })
 
-const blockForMouse = document.querySelector('.container2')
+// const blockForMouse = document.querySelector('.container2')
 // blockForMouse.addEventListener('mousemove', (event) => {blockForMouse.innerHTML = `clientX - ${event.clientX} <br> clientY - ${event.clientY}`})
 
 // blockForMouse.addEventListener('mouseover', event => {
@@ -824,12 +826,103 @@ const blockForMouse = document.querySelector('.container2')
 // 	console.log(event.target) 
 // 	console.log(event.relatedTarget)
 // })
-blockForMouse.addEventListener('mouseenter', event => { // позволяет отследить курсор над элемента, не вызывает всплывание дочерних элементов
-	blockForMouse.innerHTML = 'Курсор над элемента'
-})
-blockForMouse.addEventListener('mouseleave', event => { // позволяет отследить когда курсор уходит с элемента, не вызывает всплывание дочерних элементов
-	blockForMouse.innerHTML = 'Курсор уходит с элемента'
-})
+// blockForMouse.addEventListener('mouseenter', event => { // позволяет отследить курсор над элемента, не вызывает всплывание дочерних элементов
+// 	blockForMouse.innerHTML = 'Курсор над элемента'
+// })
+// blockForMouse.addEventListener('mouseleave', event => { // позволяет отследить когда курсор уходит с элемента, не вызывает всплывание дочерних элементов
+// 	blockForMouse.innerHTML = 'Курсор уходит с элемента'
+// })
+
+// const blockForMouse = document.querySelector('.container2')
+// blockForMouse.addEventListener('mouseover', event => {
+// 	console.log(event.target) // элемент на который курсор перешёл (для события mouseover)
+// 	console.log(event.relatedTarget) // элемент с которого курсор ушёл (для события mouseover)
+// } )
+
+// blockForMouse.addEventListener('mouseout', event => {
+// 	console.log(event.target) // элемент с которого курсор ушёл (для события mouseout)
+// 	console.log(event.relatedTarget) // элемент на который курсор перешёл (для события mouseout)
+// } )
+
+// blockForMouse.addEventListener('mouseenter', event => { console.log('Курсор над элементом')} ) // события, которые не всплывают (при наведении на дочерний объект)
+// blockForMouse.addEventListener('mouseleave', event => { console.log('Курсор уходит с элемента')} )
+
+// позволяет через всплытие организовать делегирование, чтобы не вешать на каждый тег <p> событие: 
+// blockForMouse.addEventListener('mouseover', event => {
+//     let target = event.target.closest('p')
+//     if (!target) return
+//     target.style.cssText = 'background-color: #111'
+// })
+// blockForMouse.addEventListener('mouseout', event => {
+//     let target = event.target.closest('p')
+//     if (!target) return
+//     target.style.cssText = ''
+// })
+
+// 11.6 события клавиатуры:
+
+// document.addEventListener('keydown', event => {
+//     console.log(`Нажата клавиша ${event.code} (${event.key})`)
+// })
+
+// document.addEventListener('keyup', event => {
+//     console.log(`Нажата клавиша ${event.code} (${event.key})`)
+// })
+
+// document.addEventListener('keydown', event => {
+//     if (event.code == 'KeyZ' && (event.ctrlKey || event.metaKey)) {
+//         console.log('Отмена действия')
+//     }
+// })
+
+// const txtItem = document.querySelector('#textarea')
+// const txtItemLimit = txtItem.getAttribute('maxlength')
+// console.log(txtItemLimit)
+// const txtContent = document.querySelector('.textarea__counter span')
+// txtContent.innerHTML = txtItemLimit
+
+// txtItem.addEventListener('keyup', txtSetCounter)
+// txtItem.addEventListener('keydown', event => {if(event.repeat) txtSetCounter()})
+// function txtSetCounter() {
+//     const txtCounterResult = txtItemLimit - txtItem.value.length
+//     txtContent.innerHTML = txtCounterResult
+// }
+
+// 11.7 события скролла:
+
+// window.addEventListener('scroll', event => {console.log(`${scrollY}px`)})
+
+// 11.8 события загрузки страницы:
+
+// есть три возможных значения:
+// 'loading' - документ загружается
+// 'interactive' - документ был полностью прочитан
+// 'complete' - документ был полностью прочитан и все ресурсы (изображения) были загружены
+
+// document.addEventListener('DOMContentLoaded', readyDom)
+// window.addEventListener('load', readyLoad)
+
+// function readyDom() {
+//     const image = document.querySelector('.image')
+//     console.log(document.readyState)
+//     console.log('ДОМ загружен')
+//     console.log(image.offsetWidth)
+// }
+
+// function readyLoad() {
+//     console.log(document.readyState)
+//     const image = document.querySelector('.image')
+//     console.log('Загрузка завершена')
+//     console.log(image.offsetWidth)
+// }
+
+
+window.addEventListener('beforeunload', beforeUnLoad)
+
+function beforeUnLoad(event) {
+    event.preventDefault()
+    event.returnValue = ''
+}
 
 
 
