@@ -917,12 +917,11 @@
 // }
 
 
-window.addEventListener('beforeunload', beforeUnLoad)
-
-function beforeUnLoad(event) {
-    event.preventDefault()
-    event.returnValue = ''
-}
+// window.addEventListener('beforeunload', beforeUnLoad)
+// function beforeUnLoad(event) {
+//     event.preventDefault()
+//     event.returnValue = ''
+// }
 
 
 
