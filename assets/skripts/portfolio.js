@@ -83,12 +83,12 @@ const myPortfolio = [
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.design,
 	},
-	// {
-	// 	src: '../../assets/images/portfolio/Web/O-mobile.jpg',
-	// 	alt: '',
-	// 	description: 'Lorem100',
-	// 	tagName: portfolioSettings.tagsMap.web,
-	// },
+	{
+		src: '../../assets/images/portfolio/Web/O-mobile.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.web,
+	},
 	{
 		src: '../../assets/images/portfolio/Web/LeMank.jpg',
 		alt: '',
@@ -125,12 +125,12 @@ const myPortfolio = [
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.web,
 	},
-	// {
-	// 	src: '../../assets/images/portfolio/Web/Salbero.jpg',
-	// 	alt: '',
-	// 	description: 'Lorem100',
-	// 	tagName: portfolioSettings.tagsMap.web,
-	// },
+	{
+		src: '../../assets/images/portfolio/Web/Salbero.jpg',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.web,
+	},
 	{
 		src: '../../assets/images/portfolio/Design/Narnia_roz.jpg',
 		alt: '',
@@ -167,12 +167,12 @@ const myPortfolio = [
 		description: 'Lorem100',
 		tagName: portfolioSettings.tagsMap.front,
 	},
-	// {
-	// 	src: '../../assets/images/portfolio/Front/To_do_list.png',
-	// 	alt: '',
-	// 	description: 'Lorem100',
-	// 	tagName: portfolioSettings.tagsMap.front,
-	// },
+	{
+		src: '../../assets/images/portfolio/Front/To_do_list.png',
+		alt: '',
+		description: 'Lorem100',
+		tagName: portfolioSettings.tagsMap.front,
+	},
 ]
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -276,6 +276,8 @@ function setGridLoaderToEl(domElement, isLoading) {
 // 	<p class='...'>${item.description}</p>
 // </div>
 
+// ————————————————————————————————————————————————————————————————————————————————————————————————————————
+
 // Функция для открытия модального окна с данными из выбранной картинки
 function openModalWithData(event) {
     const modal = document.getElementById('modal');
@@ -312,3 +314,7 @@ document.getElementById('modal').addEventListener('click', function(event) {
         closeModal();
     }
 });
+
+
+
+//  код для модальных окон
